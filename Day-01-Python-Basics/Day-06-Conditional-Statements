@@ -1,0 +1,26 @@
+# Day 6 - Conditional Statements
+
+## Topics Learned
+- if
+- else
+- elif
+- Logical Operator (and)
+- Logical Operator (or)
+- Logical Operator (not)
+- Nested if
+
+## Programs Practiced
+- Student Result System
+- Discount Calculator
+- Placement Eligibility
+- Scholarship Eligibility
+- Fee Verification
+- Placement-style Mini Project
+
+## What I Learned
+
+Today I learned how conditional statements help programs make decisions based on different conditions.
+
+I practiced using if, else, elif, logical operators, and nested if statements to solve real-world problems like placement eligibility, scholarship verification, and fee validation.
+
+This improved my logical thinking and problem-solving skills.
