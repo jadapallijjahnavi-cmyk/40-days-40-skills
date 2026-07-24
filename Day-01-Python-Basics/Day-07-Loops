@@ -1,0 +1,190 @@
+README.md
+for_loop_examples.py
+# Print message 5 times
+for i in range(5):
+    print("Welcome")
+
+print()
+
+# Print numbers 1 to 10
+for i in range(1, 11):
+    print(i)
+
+print()
+
+# Even numbers
+for i in range(2, 21, 2):
+    print(i)
+
+print()
+
+# Odd numbers
+for i in range(1, 20, 2):
+    print(i)
+
+print()
+
+# Employee IDs
+for emp_id in range(101, 106):
+    print("Employee ID:", emp_id)
+
+print()
+
+# Countdown
+for i in range(10, 0, -1):
+    print(i)
+
+while_loop_examples.py
+# Print message 5 times
+count = 1
+while count <= 5:
+    print("Welcome")
+    count += 1
+
+print()
+
+# Print numbers 1 to 10
+num = 1
+while num <= 10:
+    print(num)
+    num += 1
+
+print()
+
+# Even numbers
+num = 2
+while num <= 20:
+    print(num)
+    num += 2
+
+print()
+
+# Odd numbers
+num = 1
+while num <= 19:
+    print(num)
+    num += 2
+
+break_examples.py
+# Login attempts
+correct_password = "python123"
+
+for attempt in range(3):
+    password = input("Enter password: ")
+
+    if password == correct_password:
+        print("Login Successful")
+        break
+    else:
+        print("Wrong Password")
+# Product search
+
+products = ["Pen", "Book", "Bag", "Bottle"]
+
+search = input("Enter product name: ")
+
+for product in products:
+    if product == search:
+        print("Product Found")
+        break
+# Employee search
+
+for emp_id in range(101, 106):
+    if emp_id == 103:
+        print("Employee Found:", emp_id)
+        break
+
+continue_examples.py
+# Skip Employee ID 4
+
+for emp_id in range(1, 8):
+
+    if emp_id == 4:
+        continue
+
+    print("Employee ID:", emp_id)
+
+nested_loops.py
+# Batch and Student example
+
+for batch in range(1, 4):
+    print("Batch", batch)
+
+    for student in range(1, 6):
+        print(" Student", student)
+
+    print()
+# Star Pattern
+
+for i in range(1, 6):
+    for j in range(i):
+        print("*", end="")
+    print()
+
+print()
+
+# Number Pattern
+
+for i in range(1, 6):
+    for j in range(1, i + 1):
+        print(j, end=" ")
+    print()
+
+pattern_printing.py
+
+
+reverse_loops.py
+
+# Reverse Loop
+
+for i in range(10, 0, -1):
+    print(i)
+
+debugging_practice.py# Day 7 - Loops
+# Example 1: Correct comparison operator
+
+marks = 80
+
+if marks == 80:
+    print("Correct")
+
+print()
+
+# Example 2: Correct indentation
+
+for i in range(1, 6):
+    print(i)
+
+print()
+
+# Example 3: Correct loop increment
+
+count = 1
+
+while count <= 5:
+    print(count)
+    count += 1
+
+## Topics Learned
+- for loop
+- while loop
+- break
+- continue
+- Nested loops
+- Pattern printing
+- Reverse loops
+- Debugging
+
+## Programs Practiced
+- Print numbers
+- Even and odd numbers
+- Countdown
+- Employee IDs
+- Login attempts
+- Product search
+- Employee search
+- Star pattern
+- Number pattern
+
+## What I Learned
+Today I learned how loops help automate repetitive tasks in Python. I also practiced debugging programs and improved my logical thinking by writing different loop-based programs.
