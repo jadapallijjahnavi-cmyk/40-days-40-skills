@@ -1,0 +1,153 @@
+
+Day-08-Functions/
+│
+├── README.md
+├── basic_functions.py
+# Basic Function
+
+def greet():
+    print("Hello")
+
+greet()
+
+print()
+
+# Calling Function Multiple Times
+
+def python():
+    print("I am learning Python")
+
+python()
+python()
+python()
+
+print()
+
+# College Function
+
+def college():
+    print("SVCE Tirupati")
+
+college()
+
+print()
+
+# Placement Function
+
+def placement():
+    print("Preparing for Campus Placements")
+
+placement()
+
+├── parameters.py
+# One Parameter
+
+def student(name):
+    print("Student Name:", name)
+
+student("Jahnavi")
+student("Virat")
+
+print()
+
+def marks(score):
+    print("Score:", score)
+
+marks(95)
+marks(82)
+marks(67)
+
+print()
+
+# Multiple Parameters
+
+def employee(name, salary):
+    print("Employee:", name)
+    print("Salary:", salary)
+
+employee("Jahnavi", 1200000)
+print()
+
+employee("Virat", 950000)
+
+├── return_examples.py
+# Return Example
+
+def company():
+    return "Google"
+
+result = company()
+
+print(result)
+
+print()
+
+# Parameter + Return
+
+def multiply(a, b):
+    return a * b
+
+answer = multiply(4, 5)
+
+print(answer)
+
+├── mini_project.py
+# Mini Project
+
+def total_bill(price, quantity):
+    return price * quantity
+
+bill = total_bill(250, 4)
+
+print("Total Bill:", bill)
+
+└── interview_notes.md
+# Interview Questions
+
+
+### 1. What is a Function?
+
+A function is a reusable block of code that performs a specific task.
+
+### 2. What is `def`?
+
+`def` is a keyword used to define a function in Python.
+
+### 3. What is a Parameter?
+
+A parameter is a variable that receives a value when a function is called.
+
+### 4. What is `return`?
+
+`return` sends a value back from a function.
+
+### 5. Difference between `print()` and `return`
+
+* `print()` displays the output.
+* `return` sends the value back to the caller.
+
+### 6. Single Parameter vs Multiple Parameters
+
+* **Single Parameter:** A function accepts one value.
+* **Multiple Parameters:** A function accepts two or more values.
+
+### 7. Why do we use Functions?
+
+To reuse code, reduce duplication, improve readability, and make programs easier to maintain.
+
+### 8. How do you call a Function?
+
+By writing the function name followed by parentheses.
+
+### 9. Can a Function return a value?
+
+Yes, a function can return a value using the `return` keyword.
+
+### 10. Advantages of Functions
+
+* Code reusability
+* Better readability
+* Easy debugging
+* Easy maintenance
+* Reduces code duplication
+
