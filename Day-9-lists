@@ -1,0 +1,171 @@
+Day-09-Lists/
+│
+├── README.md
+├── create_list.py
+# Creating a List
+
+students = ["Jahnavi", "Virat", "Rahul"]
+
+print(students)
+
+numbers = [10, 20, 30, 40]
+
+print(numbers)
+
+├── indexing.py
+# Positive Indexing
+
+students = ["Jahnavi", "Virat", "Rahul"]
+
+print(students[0])
+
+print()
+
+# Negative Indexing
+
+print(students[-1])
+
+print()
+
+# Updating List
+
+students[1] = "Anil"
+
+print(students)
+
+├── list_methods.py
+# append()
+
+students = ["Jahnavi", "Virat"]
+
+students.append("Rahul")
+
+print(students)
+
+print()
+
+# insert()
+
+students.insert(1, "Anil")
+
+print(students)
+
+print()
+
+# remove()
+
+students.remove("Virat")
+
+print(students)
+
+print()
+
+# pop()
+
+students.pop(1)
+
+print(students)
+
+print()
+
+# len()
+
+print("Total Students:", len(students))
+
+print()
+
+# sort()
+
+marks = [85, 60, 95, 70]
+
+marks.sort()
+
+print(marks)
+
+print()
+
+# reverse()
+
+marks.reverse()
+
+print(marks)
+
+├── looping_list.py
+# Loop Through a List
+
+students = ["Jahnavi", "Virat", "Rahul"]
+
+for student in students:
+    print(student)
+
+├── mini_project.py
+# Student List Management System
+
+students = []
+
+students.append("Jahnavi")
+students.append("Virat")
+students.append("Rahul")
+
+students.remove("Virat")
+
+print("Total Students:", len(students))
+
+print("\nStudent List:")
+
+for student in students:
+    print(student)
+
+└── interview_notes.md
+# Day 9 - Interview Questions & Answers
+
+## 1. What is a List?
+A list is a collection used to store multiple values in a single variable.
+
+## 2. Why do we use Lists?
+To store and manage multiple values in one variable.
+
+## 3. How do you create a List?
+Using square brackets [].
+
+## 4. What is Indexing?
+Indexing is used to access list elements. It starts from 0.
+
+## 5. What is Negative Indexing?
+It accesses elements from the end of the list.
+
+## 6. How do you update a List element?
+By assigning a new value using its index.
+
+## 7. What does append() do?
+It adds an element to the end of the list.
+
+## 8. What does insert() do?
+It adds an element at a specific index.
+
+## 9. Difference between append() and insert()?
+append() adds at the end, while insert() adds at a specified index.
+
+## 10. What does remove() do?
+It removes an element by value.
+
+## 11. What does pop() do?
+It removes an element by index.
+
+## 12. Difference between remove() and pop()?
+remove() removes by value, while pop() removes by index.
+
+## 13. What does len() do?
+It returns the total number of elements in a list.
+
+## 14. What does sort() do?
+It arranges elements in ascending order.
+
+## 15. What does reverse() do?
+It reverses the current order of the list.
+
+## 16. Difference between sort() and reverse()?
+sort() arranges elements in ascending order, while reverse() reverses the current order.
+
+## 17. How do you loop through a List?
+Using a for loop.
