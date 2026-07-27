@@ -1,0 +1,76 @@
+Day-10-Tuples/
+│
+├── tuple_basics.py
+# Creating a Tuple
+
+students = ("Jahnavi", "Virat", "Rahul", "Anil")
+
+print("Tuple:", students)
+
+# Positive Indexing
+
+print("First Student:", students[0])
+
+print("Third Student:", students[2])
+
+# Negative Indexing
+
+print("Last Student:", students[-1])
+
+print("Second Last Student:", students[-2])
+  
+├── tuple_methods.py
+# count()
+
+numbers = (10, 20, 30, 20, 40, 20)
+
+print("20 appears:", numbers.count(20), "times")
+
+print()
+
+# index()
+
+students = ("Jahnavi", "Virat", "Rahul")
+
+print("Virat is at index:", students.index("Virat"))
+  
+├── mini_project.py
+# Employee Tuple Management
+
+employees = ("Rahul", "Priya", "Jahnavi", "Virat", "Rahul")
+
+print("Employee List:", employees)
+
+print("\nFirst Employee:", employees[0])
+
+print("Last Employee:", employees[-1])
+
+print("\nRahul appears", employees.count("Rahul"), "times")
+
+print("Jahnavi is at index:", employees.index("Jahnavi"))
+  
+└── interview_notes.md
+
+  # Day 10 - Python Tuples Interview Questions & Answers
+
+## 1. What is a Tuple?
+A tuple is a collection used to store multiple values in a single variable. A tuple is immutable.
+
+## 2. How do you create a Tuple?
+We create a tuple using round brackets ().
+
+## 3. Difference between List and Tuple?
+- List uses [] and is mutable.
+- Tuple uses () and is immutable.
+
+## 4. What is Tuple Indexing?
+Tuple indexing is used to access elements, starting from index 0.
+
+## 5. What is Negative Indexing?
+Negative indexing accesses elements from the end of a tuple.
+
+## 6. What does count() do?
+It returns the number of times a value appears in a tuple.
+
+## 7. What does index() do?
+It returns the index of the first occurrence of a value.
