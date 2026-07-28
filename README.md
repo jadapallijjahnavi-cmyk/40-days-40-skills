@@ -77,4 +77,51 @@ In this repository, I upload my daily Python learning journey, including program
 🎯 Goal:
 To build strong programming fundamentals and prepare for software engineering interviews through consistent daily practice.
 
+# 🚀 40 Days 40 Skills Challenge
 
+Welcome to my **40 Days 40 Skills Challenge** repository.
+
+In this challenge, I am learning one new programming skill every day, solving coding problems, building mini projects, and documenting my progress to strengthen my Python fundamentals for backend development and campus placements.
+
+---
+
+# 📅 Day 10 – Python Tuples
+
+## 🎯 Topics Covered
+
+- ✅ What is a Tuple?
+- ✅ Creating a Tuple
+- ✅ Tuple vs List
+- ✅ Positive Indexing
+- ✅ Negative Indexing
+- ✅ `count()`
+- ✅ `index()`
+- ✅ Tuple Mini Project
+- ✅ Interview Questions
+
+### 📁 Folder
+
+`Day-10-Tuples`
+
+---
+
+# 📅 Day 11 – Python Dictionaries
+
+## 🎯 Topics Covered
+
+- ✅ What is a Dictionary?
+- ✅ Creating a Dictionary
+- ✅ Key-Value Pairs
+- ✅ Accessing Values
+- ✅ Updating Values
+- ✅ Adding New Key-Value Pairs
+- ✅ Removing Keys using `pop()`
+- ✅ Looping using `items()`
+- ✅ Dictionary Mini Project
+- ✅ Interview Questions
+
+## 🎯 Goal
+
+Build strong programming fundamentals and prepare for campus placements by consistently learning and practicing one skill every day.
+
+⭐ More daily updates coming soon...
