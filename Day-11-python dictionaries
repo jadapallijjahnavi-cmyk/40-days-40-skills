@@ -1,0 +1,156 @@
+# 📅 Day 11 – Python Dictionaries
+
+## 🎯  Dictionaries
+
+Today, I learned one of the most important Python data structures: **Dictionaries**. Dictionaries store data in the form of **key-value pairs** and are widely used in backend development, APIs, web development, and AI applications.
+
+## 📚 Topics Covered
+
+- ✅ What is a Dictionary?
+- ✅ Creating a Dictionary
+- ✅ Key-Value Pairs
+- ✅ Accessing Values
+- ✅ Updating Values
+- ✅ Adding New Key-Value Pairs
+- ✅ Removing Key-Value Pairs using `pop()`
+- ✅ Looping Through a Dictionary using `items()`
+
+## 💻 Programs Practiced
+
+- Dictionary Creation# Creating a Dictionary
+
+student = {
+    "name": "Jahnavi",
+    "branch": "ECE",
+    "year": 3
+}
+
+print(student)
+
+
+- Accessing Dictionary Values
+# Accessing Dictionary Values
+
+student = {
+    "name": "Jahnavi",
+    "branch": "ECE"
+}
+
+print("Name:", student["name"])
+print("Branch:", student["branch"])
+
+- Updating Dictionary Values
+# Updating Dictionary Values
+
+employee = {
+    "department": "Testing"
+}
+
+employee["department"] = "Backend"
+
+print(employee)
+
+- Adding New Keys
+# Adding a New Key-Value Pair
+
+employee = {
+    "name": "Rahul"
+}
+
+employee["salary"] = 1200000
+
+print(employee)
+
+- Removing Keys using `pop()`
+# Removing a Key-Value Pair
+
+employee = {
+    "name": "Rahul",
+    "department": "Backend"
+}
+
+employee.pop("department")
+
+print(employee)
+
+- Looping Through a Dictionary
+# Printing Only Keys
+
+student = {
+    "name": "Jahnavi",
+    "branch": "ECE"
+}
+
+for key in student:
+    print(key)
+
+print()
+
+# Printing Keys and Values
+
+for key, value in student.items():
+    print(key, ":", value)
+
+
+## 🚀 Mini Project
+
+**Employee Management System**
+
+# Employee Management System
+
+employee = {
+    "id": 101,
+    "name": "Jahnavi",
+    "department": "Testing"
+}
+
+print("Original Employee Details:")
+
+for key, value in employee.items():
+    print(key, ":", value)
+
+# Update department
+employee["department"] = "Backend"
+
+# Add salary
+employee["salary"] = 1200000
+
+# Remove ID
+employee.pop("id")
+
+print("\nUpdated Employee Details:")
+
+for key, value in employee.items():
+    print(key, ":", value)
+
+### Features
+
+- Create an employee dictionary
+- Access employee details
+- Update department
+- Add salary
+- Remove employee ID
+- Display employee details using `.items()`
+
+## 🎤 Interview Questions Practiced
+
+1. What is a Dictionary?
+2. Which brackets are used to create a Dictionary?
+3. How do you access a value in a Dictionary?
+4. How do you update a Dictionary?
+5. How do you add a new key-value pair?
+6. What does `pop()` do?
+7. How do you loop through a Dictionary?
+
+## 🏆 Skills Gained
+
+- Create dictionaries
+- Store key-value pairs
+- Access values using keys
+- Update values
+- Add new key-value pairs
+- Remove key-value pairs
+- Iterate through dictionaries using `items()`
+
+---
+**Day 11/40 Skills Challenge Completed ✅**
