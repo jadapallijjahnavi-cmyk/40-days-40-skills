@@ -125,3 +125,58 @@ In this challenge, I am learning one new programming skill every day, solving co
 Build strong programming fundamentals and prepare for campus placements by consistently learning and practicing one skill every day.
 
 ⭐ More daily updates coming soon...
+
+# 📅 Day 12 – Python Strings
+
+## 🎯 Skill 14: Strings
+
+Today, I learned the fundamentals of Python Strings. Strings are sequences of characters used to store and manipulate text in Python.
+
+## 📚 Topics Covered
+
+- ✅ Creating Strings
+- ✅ Positive Indexing
+- ✅ Negative Indexing
+- ✅ String Slicing
+- ✅ Step Slicing
+- ✅ Reverse a String
+- ✅ `upper()`
+- ✅ `lower()`
+- ✅ `strip()`
+- ✅ `replace()`
+- ✅ `split()`
+- ✅ `find()`
+- ✅ `count()`
+
+## 💻 Programs
+
+- String Basics
+- Indexing
+- Slicing
+- String Methods
+- Reverse String
+
+## 🚀 Mini Project
+
+**String Analyzer**
+
+### Features
+
+- Read user input
+- Convert to uppercase and lowercase
+- Remove extra spaces
+- Count total characters
+- Reverse the string
+- Split the string into words
+
+## 🏆 Skills Gained
+
+- Create and manipulate strings
+- Access characters using indexing
+- Extract substrings using slicing
+- Apply commonly used string methods
+- Build a simple string-based project
+
+---
+**Day 12/40 Skills Challenge Completed ✅**
+
