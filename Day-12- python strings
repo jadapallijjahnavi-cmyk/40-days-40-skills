@@ -1,0 +1,336 @@
+Day-12-Strings/
+│
+├── string_basics.py
+# Creating a String
+
+name = "Jahnavi"
+
+print(name)
+  
+├── indexing.py
+# Positive Indexing
+
+text = "Python"
+
+print("Positive Index:", text[2])
+
+# Negative Indexing
+
+print("Negative Index:", text[-1])
+  
+├── slicing.py
+# String Slicing
+
+text = "Placement"
+
+print("Slice:", text[0:5])
+
+text = "Backend"
+
+print("Without Start:", text[4:])
+
+text = "Python"
+
+print("Step Slicing:", text[::2])
+
+print("Reverse:", text[::-1])
+  
+├── string_methods.py
+# upper()
+
+text = "python"
+print(text.upper())
+
+# lower()
+
+text = "PYTHON"
+print(text.lower())
+
+# strip()
+
+text = "   Backend   "
+print(text.strip())
+
+# replace()
+
+text = "Python is Easy"
+print(text.replace("Easy", "Powerful"))
+
+# split()
+
+text = "Apple Mango Banana"
+print(text.split())
+
+# find()
+
+text = "Backend"
+print(text.find("e"))
+
+# count()
+
+text = "Mississippi"
+print(text.count("s"))
+  
+├── reverse_string.py
+# Reverse a String
+
+text = "Python"
+
+print(text[::-1])
+  
+├── mini_project.py
+# String Analyzer
+
+name = input("Enter your full name: ")
+
+print("\nOriginal Name:", name)
+print("Uppercase:", name.upper())
+print("Lowercase:", name.lower())
+print("Without Extra Spaces:", name.strip())
+print("Total Characters:", len(name.strip()))
+print("Reversed Name:", name[::-1])
+print("Words:", name.split())
+  
+Here are the **Day 12 – Python Strings Interview Questions & Answers** for your revision.
+
+---
+
+# 🎤 Day 12 – Python Strings Interview Questions & Answers
+
+## 1. What is a String?
+
+**Answer:**
+
+A **string** is a sequence of characters enclosed in **single quotes (`' '`)** or **double quotes (`" "`)**.
+
+Example:
+
+```python
+name = "Jahnavi"
+```
+
+---
+
+## 2. How do you create a String?
+
+**Answer:**
+
+We create a string using **single quotes (`' '`)** or **double quotes (`" "`)**.
+
+Example:
+
+```python
+city = "Hyderabad"
+```
+
+---
+
+## 3. What is Positive Indexing?
+
+**Answer:**
+
+Positive indexing starts from **0** and moves from left to right.
+
+Example:
+
+```python
+text = "Python"
+
+print(text[2])
+```
+
+**Output:**
+
+```text
+t
+```
+
+---
+
+## 4. What is Negative Indexing?
+
+**Answer:**
+
+Negative indexing starts from **-1** and moves from right to left.
+
+Example:
+
+```python
+text = "Python"
+
+print(text[-1])
+```
+
+**Output:**
+
+```text
+n
+```
+
+---
+
+## 5. What is String Slicing?
+
+**Answer:**
+
+String slicing is used to extract a part of a string.
+
+Example:
+
+```python
+text = "Placement"
+
+print(text[0:5])
+```
+
+**Output:**
+
+```text
+Place
+```
+
+---
+
+## 6. How do you reverse a String?
+
+**Answer:**
+
+We reverse a string using slicing with `[::-1]`.
+
+Example:
+
+```python
+text = "Python"
+
+print(text[::-1])
+```
+
+**Output:**
+
+```text
+nohtyP
+```
+
+---
+
+## 7. What does `upper()` do?
+
+**Answer:**
+
+It converts all characters in a string to **uppercase**.
+
+Example:
+
+```python
+text = "python"
+
+print(text.upper())
+```
+
+---
+
+## 8. What does `lower()` do?
+
+**Answer:**
+
+It converts all characters in a string to **lowercase**.
+
+Example:
+
+```python
+text = "PYTHON"
+
+print(text.lower())
+```
+
+---
+
+## 9. What does `strip()` do?
+
+**Answer:**
+
+It removes extra spaces from the **beginning and end** of a string.
+
+Example:
+
+```python
+text = "   Backend   "
+
+print(text.strip())
+```
+
+---
+
+## 10. What does `replace()` do?
+
+**Answer:**
+
+It replaces one part of a string with another.
+
+Example:
+
+```python
+text = "Python is Easy"
+
+print(text.replace("Easy", "Powerful"))
+```
+
+---
+
+## 11. What does `split()` do?
+
+**Answer:**
+
+It splits a string into a **list** using spaces (or a specified separator).
+
+Example:
+
+```python
+text = "Apple Mango Banana"
+
+print(text.split())
+```
+
+---
+
+## 12. What does `find()` do?
+
+**Answer:**
+
+It returns the **index of the first occurrence** of a character or substring. If it is not found, it returns **-1**.
+
+Example:
+
+```python
+text = "Backend"
+
+print(text.find("e"))
+```
+
+---
+
+## 13. What does `count()` do?
+
+**Answer:**
+
+It returns the number of times a character or substring appears in a string.
+
+Example:
+
+```python
+text = "Mississippi"
+
+print(text.count("s"))
+```
+
+---
+
+# 🎯 Top 5 Interview Questions (Must Remember)
+
+1. ✅ What is a String?
+2. ✅ What is the difference between positive and negative indexing?
+3. ✅ What is String Slicing?
+4. ✅ How do you reverse a string?
+5. ✅ What do `upper()`, `lower()`, `strip()`, `replace()`, `split()`, `find()`, and `count()` do?
+
+
