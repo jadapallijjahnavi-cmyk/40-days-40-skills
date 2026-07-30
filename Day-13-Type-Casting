@@ -1,0 +1,89 @@
+Day-13-Type-Casting/
+│
+├── string_to_int.py
+# String to Integer
+
+age = "20"
+
+print(int(age))
+
+├── add_string_numbers.py
+
+
+# Adding Two String Numbers
+
+num1 = "10"
+num2 = "20"
+
+print(int(num1) + int(num2))
+
+├── int_to_float.py
+
+# Integer to Float
+
+num = 25
+
+print(float(num))
+├── float_to_int.py
+# Float to Integer
+
+value = 45.9
+
+print(int(value))
+
+├── int_to_string.py
+# Integer to String
+
+number = 50
+
+print("Number:", str(number))
+
+├── user_input_type_casting.py
+# User Input with Type Casting
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+print("Sum:", num1 + num2)
+
+├── product_bill_calculator.py
+# Product Bill Calculator
+
+price = int(input("Enter product price: "))
+quantity = int(input("Enter quantity: "))
+
+total = price * quantity
+
+print("Total Bill:", total)
+
+├── type_function.py
+# Checking Data Types
+
+num = 10
+price = 99.99
+name = "Jahnavi"
+is_placed = True
+
+print(type(num))
+print(type(price))
+print(type(name))
+print(type(is_placed))
+
+├── mini_project.py
+
+# Student Marks Calculator
+
+name = input("Enter Student Name: ")
+
+marks1 = int(input("Enter Python Marks: "))
+marks2 = int(input("Enter Java Marks: "))
+marks3 = int(input("Enter SQL Marks: "))
+
+total = marks1 + marks2 + marks3
+average = total / 3
+
+print("\nStudent Name:", name)
+print("Total Marks:", total)
+print("Average:", average)
+print("Data Type of Total:", type(total))
+print("Data Type of Average:", type(average))
