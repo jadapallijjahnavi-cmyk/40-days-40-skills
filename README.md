@@ -180,3 +180,50 @@ Today, I learned the fundamentals of Python Strings. Strings are sequences of ch
 ---
 **Day 12/40 Skills Challenge Completed ✅**
 
+# 📅 Day 13 – Python Type Casting
+
+## 🎯 Skill 15: Type Casting
+
+Today, I learned the fundamentals of Python Type Casting. Type casting is the process of converting one data type into another. It is essential for handling user input and performing calculations in Python.
+
+## 📚 Topics Covered
+
+- ✅ String to Integer (`int()`)
+- ✅ Integer to Float (`float()`)
+- ✅ Float to Integer (`int()`)
+- ✅ Integer to String (`str()`)
+- ✅ User Input with Type Casting
+- ✅ Checking Data Types using `type()`
+
+## 💻 Programs
+
+- String to Integer
+- Adding Two String Numbers
+- Integer to Float
+- Float to Integer
+- Integer to String
+- User Input with Type Casting
+- Product Bill Calculator
+- Data Type Checker
+
+## 🚀 Mini Project
+
+**Student Marks Calculator**
+
+### Features
+
+- Accept student details using `input()`
+- Convert marks using `int()`
+- Calculate total and average
+- Display data types using `type()`
+
+## 🏆 Skills Gained
+
+- Convert data between different types
+- Handle numeric user input
+- Perform mathematical calculations
+- Check variable data types using `type()`
+
+---
+**Day 13/40 Skills Challenge Completed ✅**
+
