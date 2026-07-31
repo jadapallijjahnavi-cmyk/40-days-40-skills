@@ -226,4 +226,49 @@ Today, I learned the fundamentals of Python Type Casting. Type casting is the pr
 
 ---
 **Day 13/40 Skills Challenge Completed ✅**
+# 📅 Day 14 – Python Exception Handling
+
+
+Today, I learned Python Exception Handling. Exception handling is used to handle runtime errors and prevent programs from crashing unexpectedly.
+
+## 📚 Topics Covered
+
+- ✅ Exception Without Handling
+- ✅ try and except
+- ✅ Handling ValueError
+- ✅ else block
+- ✅ finally block
+- ✅ Multiple Exception Handling
+
+## 💻 Programs
+
+- Exception Without Handling
+- Using try and except
+- Handling ValueError
+- Using else
+- Using finally
+- Multiple Exceptions
+
+## 🚀 Mini Project
+
+**Safe Calculator**
+
+### Features
+
+- Accepts user input
+- Performs Addition, Subtraction, Multiplication and Division
+- Handles invalid input using ValueError
+- Prevents division by zero using ZeroDivisionError
+- Uses finally block to close the program safely
+
+## 🏆 Skills Gained
+
+- Handle runtime errors
+- Use try, except, else and finally
+- Handle multiple exceptions
+- Build error-free Python programs
+
+---
+**Day 14/40 Skills Challenge Completed ✅**
+
 
