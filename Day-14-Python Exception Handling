@@ -1,0 +1,74 @@
+Day-14-Exception-Handling/
+│
+├── exception_without_handling.py
+num1 = int(input("Enter First Number: "))
+num2 = int(input("Enter Second Number: "))
+
+print(num1 / num2)
+
+├── try_except.py
+
+try:
+    num1 = int(input("Enter First Number: "))
+    num2 = int(input("Enter Second Number: "))
+
+    print("Result:", num1 / num2)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+├── value_error.py
+try:
+    age = int(input("Enter Age: "))
+    print("Age:", age)
+
+except ValueError:
+    print("Please enter numbers only.")
+
+├── else_block.py
+try:
+    num = int(input("Enter a Number: "))
+except ValueError:
+    print("Invalid Input")
+else:
+    print("You Entered:", num)
+
+├── finally_block.py
+try:
+    print(10 / 2)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+
+finally:
+    print("Program Finished")
+
+├── multiple_exceptions.py
+try:
+    num = int(input("Enter a Number: "))
+    print(100 / num)
+
+except ValueError:
+    print("Please enter a valid number.")
+
+except ZeroDivisionError:
+    print("Number cannot be zero.")
+
+├── mini_project_safe_calculator.py
+try:
+    num1 = int(input("Enter First Number: "))
+    num2 = int(input("Enter Second Number: "))
+
+    print("Addition:", num1 + num2)
+    print("Subtraction:", num1 - num2)
+    print("Multiplication:", num1 * num2)
+    print("Division:", num1 / num2)
+
+except ValueError:
+    print("Please enter numbers only.")
+
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+
+finally:
+    print("Calculator Closed Successfully.")
+
