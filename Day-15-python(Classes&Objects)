@@ -1,0 +1,95 @@
+Day-15-OOP-Classes-Objects/
+│
+├── create_class.py
+class Student:
+    pass
+
+student1 = Student()
+
+print(student1)
+
+├── class_attributes.py
+
+class Student:
+    name = "Jahnavi"
+    branch = "ECE"
+
+student1 = Student()
+
+print(student1.name)
+print(student1.branch)
+├── constructor.py
+
+class Student:
+
+    def __init__(self):
+        self.name = "Jahnavi"
+        self.branch = "ECE"
+
+student1 = Student()
+
+print(student1.name)
+print(student1.branch)
+├── constructor_parameters.py
+class Student:
+
+    def __init__(self, name, branch):
+        self.name = name
+        self.branch = branch
+
+student1 = Student("Jahnavi", "ECE")
+
+print(student1.name)
+print(student1.branch)
+
+├── instance_method.py
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+    def display(self):
+        print("Student Name:", self.name)
+
+s1 = Student("Jahnavi")
+s1.display()
+
+├── multiple_objects.py
+class Student:
+
+    def __init__(self, name, branch):
+        self.name = name
+        self.branch = branch
+
+    def display(self):
+        print("Name:", self.name)
+        print("Branch:", self.branch)
+
+s1 = Student("Jahnavi", "ECE")
+s2 = Student("Rahul", "CSE")
+
+s1.display()
+print()
+
+s2.display()
+
+├── mini_project_student_management.py
+
+class Student:
+
+    def __init__(self, name, roll_no, branch):
+        self.name = name
+        self.roll_no = roll_no
+        self.branch = branch
+
+    def display(self):
+        print("Student Name:", self.name)
+        print("Roll No:", self.roll_no)
+        print("Branch:", self.branch)
+        print("----------------------")
+
+s1 = Student("Jahnavi", 101, "ECE")
+s2 = Student("Rahul", 102, "CSE")
+
+s1.display()
+s2.display()
