@@ -272,3 +272,62 @@ Today, I learned Python Exception Handling. Exception handling is used to handle
 **Day 14/40 Skills Challenge Completed ✅**
 
 
+# 📅 Day 15 – Python OOP (Classes & Objects)
+
+
+Today, I learned the fundamentals of **Object-Oriented Programming (OOP)** in Python using **Classes** and **Objects**. OOP helps organize code into reusable and maintainable structures and is widely used in software development.
+
+---
+
+## 📚 Topics Covered
+
+- ✅ Creating a Class
+- ✅ Creating an Object
+- ✅ Class Attributes
+- ✅ Constructor (`__init__()`)
+- ✅ Constructor with Parameters
+- ✅ Instance Methods
+- ✅ Multiple Objects
+
+---
+
+## 💻 Programs
+
+1. Create a Class
+2. Class with Attributes
+3. Constructor (`__init__()`)
+4. Constructor with Parameters
+5. Instance Method
+6. Multiple Objects
+
+---
+
+## 🚀 Mini Project
+
+### Student Management System
+
+### Features
+
+- ✅ Create student objects
+- ✅ Store student details
+- ✅ Use constructors with parameters
+- ✅ Display student information using methods
+- ✅ Create and manage multiple student objects
+
+---
+
+## 🏆 Skills Gained
+
+- Understand Object-Oriented Programming (OOP)
+- Create Classes and Objects
+- Use Constructors (`__init__()`)
+- Work with Instance Variables
+- Create Instance Methods
+- Manage Multiple Objects
+- Build a simple OOP-based Python application
+
+---
+
+**Day 15/40 Skills Challenge Completed ✅**
+
+
