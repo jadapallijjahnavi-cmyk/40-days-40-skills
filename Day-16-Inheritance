@@ -1,0 +1,114 @@
+Day-16-Inheritance/
+│── basic_inheritance.py
+class Animal:
+
+    def sound(self):
+        print("Animal makes a sound")
+
+
+class Dog(Animal):
+    pass
+
+
+dog = Dog()
+dog.sound()
+
+│── parent_child_methods.py
+class Animal:
+
+    def eat(self):
+        print("Animal is Eating")
+
+
+class Dog(Animal):
+
+    def bark(self):
+        print("Dog is Barking")
+
+
+dog = Dog()
+
+dog.eat()
+dog.bark()
+
+│── child_class_method.py
+class Vehicle:
+
+    def start(self):
+        print("Vehicle Started")
+
+
+class Car(Vehicle):
+
+    def drive(self):
+        print("Car is Driving")
+
+
+car = Car()
+
+car.start()
+car.drive()
+
+│── method_overriding.py
+class Animal:
+
+    def sound(self):
+        print("Animal Sound")
+
+
+class Dog(Animal):
+
+    def sound(self):
+        print("Dog Barks")
+
+
+dog = Dog()
+
+dog.sound()
+
+│── super_method.py
+class Animal:
+
+    def sound(self):
+        print("Animal Sound")
+
+
+class Dog(Animal):
+
+    def sound(self):
+        super().sound()
+        print("Dog Barks")
+
+
+dog = Dog()
+
+dog.sound()
+
+│── mini_project_employee_management.py
+
+class Employee:
+
+    def __init__(self, name, company):
+        self.name = name
+        self.company = company
+
+    def display(self):
+        print("Employee Name:", self.name)
+        print("Company:", self.company)
+
+
+class Developer(Employee):
+
+    def __init__(self, name, company, language):
+        super().__init__(name, company)
+        self.language = language
+
+    def display_developer(self):
+        self.display()
+        print("Programming Language:", self.language)
+
+
+dev = Developer("Jahnavi", "JJ Technologies", "Python")
+
+dev.display_developer()
+│── README.md
