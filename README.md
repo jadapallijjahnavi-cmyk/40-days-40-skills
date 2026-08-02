@@ -328,6 +328,59 @@ Today, I learned the fundamentals of **Object-Oriented Programming (OOP)** in Py
 
 ---
 
-**Day 15/40 Skills Challenge Completed ✅**
+**Day 15/40 Skills Challenge Completed ✅*
 
 
+# 📅 Day 16 – Python Inheritance
+
+
+Today, I learned **Inheritance** in Python. Inheritance allows a **child class** to inherit the properties and methods of a **parent class**, promoting code reusability and reducing duplicate code.
+
+---
+
+## 📚 Topics Covered
+
+- ✅ Basic Inheritance
+- ✅ Parent and Child Classes
+- ✅ Child Class Methods
+- ✅ Method Overriding
+- ✅ Using `super()`
+
+---
+
+## 💻 Programs
+
+1. Basic Inheritance
+2. Parent and Child Methods
+3. Child Class with Its Own Method
+4. Method Overriding
+5. Using `super()`
+
+---
+
+## 🚀 Mini Project
+
+### Employee Management System
+
+### Features
+
+- ✅ Created Parent and Child Classes
+- ✅ Used Constructor Inheritance
+- ✅ Used `super()` to call the Parent Constructor
+- ✅ Displayed Employee Details
+- ✅ Demonstrated Code Reusability
+
+---
+
+## 🏆 Skills Gained
+
+- Understand Inheritance
+- Create Parent and Child Classes
+- Reuse Code Effectively
+- Implement Method Overriding
+- Use `super()` in Python
+- Build OOP-based Applications
+
+---
+
+**Day 16/40 Skills Challenge Completed ✅**
