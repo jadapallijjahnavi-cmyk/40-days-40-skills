@@ -383,4 +383,68 @@ Today, I learned **Inheritance** in Python. Inheritance allows a **child class**
 
 ---
 
-**Day 16/40 Skills Challenge Completed ✅**
+**Day 16/40 Skills Challenge Completed ✅*
+
+# 📅 Day 17 – Python Polymorphism
+
+
+Today, I learned **Polymorphism** in Python. Polymorphism means **"One Method, Many Forms."** It allows the same method name to perform different actions depending on the object or class.
+
+---
+
+## 📚 Topics Covered
+
+- ✅ What is Polymorphism?
+- ✅ Same Method, Different Classes
+- ✅ Polymorphism with Inheritance
+- ✅ Polymorphism Using a Loop
+- ✅ Real-World Example of Polymorphism
+
+---
+
+## 💻 Programs
+
+1. Same Method, Different Classes
+2. Polymorphism with Inheritance
+3. Polymorphism Using a Loop
+4. Real-World Payment System
+5. Notification System (Mini Project)
+
+---
+
+## 🚀 Mini Project
+
+### Notification System
+
+### Features
+
+- ✅ Created Email, SMS, and WhatsApp notification classes
+- ✅ Implemented the same `send()` method with different behaviors
+- ✅ Demonstrated polymorphism using multiple objects
+- ✅ Improved code flexibility and reusability
+
+---
+
+## 🎤 Interview Questions Covered
+
+- What is Polymorphism?
+- What does "One Method, Many Forms" mean?
+- Why do we use Polymorphism?
+- Can different classes have the same method name?
+- What is a real-world example of Polymorphism?
+- How is Method Overriding related to Polymorphism?
+
+---
+
+## 🏆 Skills Gained
+
+- Understand Polymorphism
+- Create Multiple Classes with the Same Method
+- Apply Method Overriding
+- Use Polymorphism with Loops
+- Build Reusable and Flexible OOP Programs
+
+---
+
+**Day 17/40 Skills Challenge Completed ✅**
+
