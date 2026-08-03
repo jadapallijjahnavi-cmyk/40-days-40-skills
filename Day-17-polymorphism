@@ -1,0 +1,90 @@
+Day-17-Polymorphism/
+│── same_method_different_classes.py
+class Dog:
+    def sound(self):
+        print("Dog Barks")
+
+class Cat:
+    def sound(self):
+        print("Cat Meows")
+
+dog = Dog()
+cat = Cat()
+
+dog.sound()
+cat.sound()
+
+│── polymorphism_with_inheritance.py
+
+class Animal:
+    def sound(self):
+        print("Animal Sound")
+
+class Dog(Animal):
+    def sound(self):
+        print("Dog Barks")
+
+class Cat(Animal):
+    def sound(self):
+        print("Cat Meows")
+
+dog = Dog()
+cat = Cat()
+
+dog.sound()
+cat.sound()
+│── polymorphism_using_loop.py
+class Dog:
+    def sound(self):
+        print("Dog Barks")
+
+class Cat:
+    def sound(self):
+        print("Cat Meows")
+
+class Cow:
+    def sound(self):
+        print("Cow Moos")
+
+animals = [Dog(), Cat(), Cow()]
+
+for animal in animals:
+    animal.sound()
+
+│── payment_system.py
+
+class CreditCard:
+    def pay(self):
+        print("Payment by Credit Card")
+
+class UPI:
+    def pay(self):
+        print("Payment by UPI")
+
+class Cash:
+    def pay(self):
+        print("Payment by Cash")
+
+payments = [CreditCard(), UPI(), Cash()]
+
+for payment in payments:
+    payment.pay()
+│── mini_project_notification_system.py
+
+class Email:
+    def send(self):
+        print("Sending Email Notification")
+
+class SMS:
+    def send(self):
+        print("Sending SMS Notification")
+
+class WhatsApp:
+    def send(self):
+        print("Sending WhatsApp Notification")
+
+notifications = [Email(), SMS(), WhatsApp()]
+
+for notification in notifications:
+    notification.send()
+│── README.md
