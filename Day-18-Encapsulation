@@ -1,0 +1,79 @@
+Day-18-Encapsulation/
+│── public_variable.py
+class Student:
+
+    def __init__(self):
+        self.name = "Jahnavi"
+
+s = Student()
+
+print(s.name)
+
+│── private_variable.py
+class Student:
+
+    def __init__(self):
+        self.__marks = 95
+
+s = Student()
+
+# This will generate an AttributeError
+print(s.__marks)
+
+│── access_private_variable.py
+class Student:
+
+    def __init__(self):
+        self.__marks = 95
+
+    def show_marks(self):
+        print("Marks:", self.__marks)
+
+s = Student()
+
+s.show_marks()
+
+│── update_private_variable.py
+
+class Student:
+
+    def __init__(self):
+        self.__marks = 90
+
+    def update_marks(self, marks):
+        self.__marks = marks
+
+    def show_marks(self):
+        print("Marks:", self.__marks)
+
+s = Student()
+
+s.show_marks()
+
+s.update_marks(98)
+
+s.show_marks()
+│── mini_project_bank_account.py
+class BankAccount:
+
+    def __init__(self, balance):
+        self.__balance = balance
+
+    def deposit(self, amount):
+        self.__balance += amount
+
+    def withdraw(self, amount):
+        self.__balance -= amount
+
+    def show_balance(self):
+        print("Current Balance:", self.__balance)
+
+
+account = BankAccount(10000)
+
+account.deposit(2000)
+account.withdraw(1500)
+
+account.show_balance()
+
+│── README.md
