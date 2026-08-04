@@ -448,3 +448,67 @@ Today, I learned **Polymorphism** in Python. Polymorphism means **"One Method, M
 
 **Day 17/40 Skills Challenge Completed ✅**
 
+# 📅 Day 18 – Python Encapsulation
+
+
+Today, I learned **Encapsulation** in Python. Encapsulation is an Object-Oriented Programming (OOP) concept that combines data and methods into a single class while protecting data from direct access.
+
+---
+
+## 📚 Topics Covered
+
+- ✅ Public Variables
+- ✅ Private Variables
+- ✅ Accessing Private Variables Using Methods
+- ✅ Updating Private Variables
+- ✅ Encapsulation for Data Security
+
+---
+
+## 💻 Programs
+
+1. Public Variable
+2. Private Variable
+3. Accessing a Private Variable Using a Method
+4. Updating a Private Variable
+5. Bank Account Management System (Mini Project)
+
+---
+
+## 🚀 Mini Project
+
+### Bank Account Management System
+
+### Features
+
+- ✅ Created a `Bank Account` class
+- ✅ Used a private variable (`__balance`)
+- ✅ Performed deposit and withdrawal operations
+- ✅ Displayed updated account balance
+- ✅ Applied encapsulation for secure data handling
+
+---
+
+## 🎤 Interview Questions Covered
+
+- What is Encapsulation?
+- What is a Public Variable?
+- What is a Private Variable?
+- How do you access a Private Variable?
+- How do you update a Private Variable?
+- Why is Encapsulation important?
+
+---
+
+## 🏆 Skills Gained
+
+- Understand Encapsulation
+- Work with Public and Private Variables
+- Protect Data Using Private Variables
+- Access Private Data Through Methods
+- Build Secure OOP-Based Applications
+
+---
+
+**Day 18/40 Skills Challenge Completed ✅**
+
