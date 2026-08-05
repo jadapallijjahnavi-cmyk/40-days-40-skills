@@ -1,0 +1,117 @@
+For **Day 19 Skill  Abstraction**
+
+---
+
+### 1. `abstract_class.py`
+
+```python
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+
+    @abstractmethod
+    def sound(self):
+        pass
+```
+
+---
+
+### 2. `abstract_method.py`
+
+```python
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+
+    @abstractmethod
+    def sound(self):
+        pass
+
+class Dog(Animal):
+
+    def sound(self):
+        print("Dog Barks")
+
+dog = Dog()
+dog.sound()
+```
+
+---
+
+### 3. `abstract_class_object.py`
+
+```python
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+
+    @abstractmethod
+    def area(self):
+        pass
+
+# This will raise a TypeError
+s = Shape()
+```
+
+---
+
+### 4. `multiple_child_classes.py`
+
+```python
+from abc import ABC, abstractmethod
+
+class Payment(ABC):
+
+    @abstractmethod
+    def pay(self):
+        pass
+
+class UPI(Payment):
+
+    def pay(self):
+        print("Payment using UPI")
+
+class CreditCard(Payment):
+
+    def pay(self):
+        print("Payment using Credit Card")
+
+u = UPI()
+c = CreditCard()
+
+u.pay()
+c.pay()
+```
+
+---
+
+### 5. `mini_project_payment_system.py`
+
+```python
+from abc import ABC, abstractmethod
+
+class Payment(ABC):
+
+    @abstractmethod
+    def pay(self):
+        pass
+
+class UPI(Payment):
+
+    def pay(self):
+        print("Payment Successful using UPI")
+
+class CreditCard(Payment):
+
+    def pay(self):
+        print("Payment Successful using Credit Card")
+
+upi = UPI()
+card = CreditCard()
+
+upi.pay()
+card.pay()
+```
+
+---
+
