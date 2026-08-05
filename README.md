@@ -512,3 +512,68 @@ Today, I learned **Encapsulation** in Python. Encapsulation is an Object-Oriente
 
 **Day 18/40 Skills Challenge Completed ✅**
 
+
+# 📅 Day 19 – Python Abstraction
+
+
+
+Today, I learned **Abstraction** in Python. Abstraction is an Object-Oriented Programming (OOP) concept that hides implementation details and exposes only the essential features to the user.
+
+---
+
+## 📚 Topics Covered
+
+- ✅ Abstract Class
+- ✅ Abstract Method
+- ✅ Creating Abstract Classes using `ABC`
+- ✅ Using `@abstractmethod`
+- ✅ Multiple Child Classes
+- ✅ Real-World Use of Abstraction
+
+---
+
+## 💻 Programs
+
+1. Abstract Class
+2. Abstract Method
+3. Abstract Class Cannot Create Objects
+4. Abstraction with Multiple Child Classes
+5. Payment System (Mini Project)
+
+---
+
+## 🚀 Mini Project
+
+### Payment System
+
+### Features
+
+- ✅ Created an Abstract Class using the `abc` module
+- ✅ Implemented abstract methods in child classes
+- ✅ Created multiple payment methods (UPI & Credit Card)
+- ✅ Demonstrated abstraction in a real-world scenario
+
+---
+
+## 🎤 Interview Questions Covered
+
+- What is Abstraction?
+- Which module is used for Abstraction in Python?
+- What is an Abstract Class?
+- What is an Abstract Method?
+- Can we create an object of an Abstract Class?
+- Why do we use Abstraction?
+
+---
+
+## 🏆 Skills Gained
+
+- Understand Abstraction
+- Create Abstract Classes
+- Use `@abstractmethod`
+- Implement Abstract Methods in Child Classes
+- Build OOP-Based Applications Using Abstraction
+
+---
+
+**Day 19/40 Skills Challenge Completed ✅**
