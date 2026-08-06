@@ -577,3 +577,98 @@ Today, I learned **Abstraction** in Python. Abstraction is an Object-Oriented Pr
 ---
 
 **Day 19/40 Skills Challenge Completed ✅**
+
+# 📅 Day 20 – File Handling, Decorators & Generators
+
+
+Today, I learned three advanced Python concepts: **File Handling**, **Decorators**, and **Generators**. These concepts are essential for working with files, extending function behavior, and writing memory-efficient programs.
+
+
+## 📚 Topics Covered
+
+### 📂 File Handling
+- ✅ File Modes (`r`, `w`, `a`, `x`)
+- ✅ `open()`
+- ✅ `read()`
+- ✅ `write()`
+- ✅ `close()`
+- ✅ `with open()`
+
+### 🎭 Decorators
+- ✅ What is a Decorator?
+- ✅ Using `@` Symbol
+- ✅ Logging Decorator
+- ✅ Decorator with Arguments
+
+### ⚙️ Generators
+- ✅ `yield` Keyword
+- ✅ Difference between `return` and `yield`
+- ✅ Memory-Efficient Programming
+
+---
+
+## 💻 Programs
+
+### File Handling
+1. Create a File
+2. Read a File
+3. Write to a File
+4. Append Data to a File
+5. Read File Using `with open()`
+
+### Decorators
+6. Simple Decorator
+7. Decorator Using `@`
+8. Logging Decorator
+9. Decorator with Arguments
+
+### Generators
+10. Simple Generator
+11. Generator Using Loop
+
+---
+
+## 🚀 Mini Projects
+
+### 📁 Student Record Management System
+- Store student records in a file
+- Read stored data
+- Append new records
+
+### 🎫 Ticket Number Generator
+- Generate ticket numbers using `yield`
+- Demonstrate memory-efficient iteration
+
+---
+
+## 🎤 Interview Questions Covered
+
+- What is File Handling?
+- Difference between `r`, `w`, and `a` modes?
+- What is a Decorator?
+- Why are Decorators used?
+- What is a Generator?
+- Difference between `return` and `yield`?
+
+---
+
+## 🏆 Skills Gained
+
+- File Handling
+- Working with Different File Modes
+- Creating Decorators
+- Using `yield`
+- Memory-Efficient Programming
+
+---
+
+## 🎯 Phase 1 Achievement
+
+- ✅ Completed Python Foundation
+- ✅ Revised Core Python Topics
+- ✅ Scored 10/10 in Revision Quiz
+
+---
+
+**Day 20/40 Skills Challenge Completed ✅**
+
