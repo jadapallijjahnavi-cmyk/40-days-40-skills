@@ -1,0 +1,137 @@
+Day-18-File-Handling-Decorators-Generators/
+
+### 📂 1. Create a File (`create_file.py`)
+
+```python
+file = open("student.txt", "w")
+file.write("Name: Jahnavi\n")
+file.write("Branch: ECE")
+file.close()
+
+print("File created successfully.")
+```
+
+---
+
+### 📂 2. Read a File (`read_file.py`)
+
+```python
+file = open("student.txt", "r")
+print(file.read())
+file.close()
+```
+
+---
+
+### 📂 3. Append Data (`append_file.py`)
+
+```python
+file = open("student.txt", "a")
+file.write("\nCollege: SVCE")
+file.close()
+
+print("Data appended successfully.")
+```
+
+---
+
+### 📂 4. Using `with open()` (`with_open.py`)
+
+```python
+with open("student.txt", "r") as file:
+    print(file.read())
+```
+
+---
+
+### 🎭 5. Simple Decorator (`simple_decorator.py`)
+
+```python
+def decorator(func):
+    def wrapper():
+        print("Before Function")
+        func()
+        print("After Function")
+    return wrapper
+
+@decorator
+def greet():
+    print("Hello, Jahnavi!")
+
+greet()
+```
+
+---
+
+### 🎭 6. Logging Decorator (`logging_decorator.py`)
+
+```python
+def log(func):
+    def wrapper():
+        print("Function Started")
+        func()
+        print("Function Ended")
+    return wrapper
+
+@log
+def display():
+    print("Displaying Data")
+
+display()
+```
+
+---
+
+### ⚙️ 7. Simple Generator (`simple_generator.py`)
+
+```python
+def numbers():
+    yield 1
+    yield 2
+    yield 3
+
+for num in numbers():
+    print(num)
+```
+
+---
+
+### ⚙️ 8. Generator with Loop (`generator_loop.py`)
+
+```python
+def even_numbers():
+    for i in range(2, 11, 2):
+        yield i
+
+for num in even_numbers():
+    print(num)
+```
+
+---
+
+### 💻 9. Mini Project – Student Record Management (`student_record_management.py`)
+
+```python
+with open("students.txt", "w") as file:
+    file.write("101 - Jahnavi - ECE\n")
+    file.write("102 - Rahul - CSE\n")
+
+with open("students.txt", "r") as file:
+    print("Student Records:")
+    print(file.read())
+```
+
+---
+
+### 💻 10. Mini Project – Ticket Number Generator (`ticket_generator.py`)
+
+```python
+def ticket_generator():
+    for ticket in range(1001, 1006):
+        yield ticket
+
+print("Ticket Numbers:")
+for ticket in ticket_generator():
+    print(ticket)
+```
+
