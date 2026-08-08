@@ -1,0 +1,14 @@
+Phase-2-Backend-Journey/
+│
+├── Day-21-Database-Creation/
+│   │
+│   ├── 01_create_database.sql
+     CREATE DATABASE education_db;
+
+│   ├── 02_create_student_database.sql
+     CREATE DATABASE student_management;
+
+│   ├── 03_show_databases.sql
+     
+    SHOW DATABASES;
+
