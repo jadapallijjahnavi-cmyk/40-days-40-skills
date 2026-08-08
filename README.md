@@ -672,3 +672,86 @@ Today, I learned three advanced Python concepts: **File Handling**, **Decorators
 
 **Day 20/40 Skills Challenge Completed ✅**
 
+# 📅 Day 21 – Phase 2
+
+### 🎯 Today's Goal
+
+Today I started Phase 2 of my Backend Development journey.
+
+The goal was to understand the fundamentals of databases and learn how to create a database using SQL.
+
+---
+
+## 📚 What I Learned Today
+
+### 1. Database
+
+A database is an organized collection of data used to store, retrieve, update, and manage information.
+
+### 2. DBMS
+
+DBMS stands for Database Management System.
+
+It is used to create, store, manage, and access databases.
+
+Examples:
+- PostgreSQL
+- MySQL
+- SQLite
+- Oracle
+
+### 3. RDBMS
+
+RDBMS stands for Relational Database Management System.
+
+It stores data in tables using rows and columns.
+
+### 4. SQL
+
+SQL stands for Structured Query Language.
+
+SQL is used to communicate with relational databases.
+
+---
+
+## 🧠 Database Structure
+
+I learned the basic structure:
+
+Database → Tables → Rows & Columns → Data
+
+Example:
+education_db
+│
+├── students
+├── courses
+├── teachers
+└── assignments
+💻 Programs Practiced
+
+Today I practiced SQL programs for:
+
+Creating a database
+Creating a student management database
+Viewing available databases
+Selecting a database
+
+The actual programs are stored separately in the .sql files in this folder.
+
+🌍 Real-World Understanding
+
+I understood how a backend application uses a database.
+
+Example:
+
+User → Backend API → Database → Data
+
+For an e-learning application, the database can store:
+
+Students
+Courses
+Teachers
+Assignments
+User information
+
+##Day-21-completed##
