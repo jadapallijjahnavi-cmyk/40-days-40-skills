@@ -755,3 +755,91 @@ Assignments
 User information
 
 ##Day-21-completed##
+
+
+# Day 22 – Phase 2
+## Skill : Table Design
+
+Today I continued Phase 2 of my Backend Development journey and learned the fundamentals of designing tables in a relational database.
+
+## 📚 What I Learned
+
+- What is a Table
+- Rows and Columns
+- How to identify columns
+- SQL Data Types
+- INT
+- VARCHAR
+- TEXT
+- Introduction to Constraints
+- PRIMARY KEY
+- NOT NULL
+- UNIQUE
+- CHECK
+- Basic Table Design
+
+## 💻 Programs Practiced
+
+### 1. Creating a Students Table
+
+Practiced creating a table using `CREATE TABLE` with columns and data types.
+
+### 2. Creating a Courses Table
+
+Designed a courses table for an e-learning application.
+
+### 3. Using PRIMARY KEY
+
+Practiced using `PRIMARY KEY` to uniquely identify records.
+
+### 4. Using Constraints
+
+Practiced:
+
+- PRIMARY KEY
+- NOT NULL
+- UNIQUE
+- CHECK
+
+## 🌍 Real-World Application
+
+I learned how table design is used to organize data in backend applications.
+
+Example:
+
+Database
+↓
+Students Table
+↓
+Courses Table
+↓
+Teachers Table
+
+## 🧠 Key Takeaways
+
+- Tables store related data.
+- Columns represent attributes.
+- Every column needs an appropriate data type.
+- Constraints help maintain data integrity.
+- Good table design is important for building reliable backend systems.
+
+## 🚀 Project Connection
+
+I started connecting table design concepts with my major projects, especially:
+
+- AI Interview Bot
+- E-Learning Resource Management
+
+## 📊 Progress
+
+Phase 1: Completed ✅
+
+Phase 2: In Progress 🔄
+
+Day 22: Completed ✅
+
+Skill 18: Table Design 🔄
+
+## ⏭️ Next
+
+Continue database design and move towards CRUD operations.
