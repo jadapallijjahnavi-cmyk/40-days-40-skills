@@ -1,0 +1,51 @@
+Day-22-Table-Design/
+│
+├── 01_create_students_table.sql
+├── 02_create_courses_table.sql
+├── 03_table_with_primary_key.sql
+├── 04_table_with_constraints.sql
+└── README.md
+```
+
+### 📄 01_create_students_table.sql
+
+```sql
+CREATE TABLE students (
+    id INT,
+    name VARCHAR(100),
+    branch VARCHAR(50),
+    age INT
+);
+```
+
+### 📄 02_create_courses_table.sql
+
+```sql
+CREATE TABLE courses (
+    course_id INT,
+    course_name VARCHAR(100),
+    duration INT,
+    description TEXT
+);
+```
+
+### 📄 03_table_with_primary_key.sql
+
+```sql
+CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    branch VARCHAR(50)
+);
+```
+
+### 📄 04_table_with_constraints.sql
+
+```sql
+CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    age INT CHECK (age >= 18)
+);
+
