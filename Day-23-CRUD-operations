@@ -1,0 +1,62 @@
+Skill-19-CRUD-Operations/
+│
+├── 01_create_insert.sql
+
+--  CRUD - CREATE
+
+INSERT INTO students
+(student_id, name, branch, cgpa)
+VALUES
+(101, 'Jahnavi', 'ECE', 8.90);
+├── 02_read_select.sql
+
+--  CRUD - READ
+
+SELECT * FROM students;
+
+SELECT name, branch, cgpa
+FROM students;
+├── 03_update.sql
+
+-- CRUD - UPDATE
+
+UPDATE students
+SET cgpa = 9.10
+WHERE student_id = 101;
+├── 04_delete.sql
+--  CRUD - DELETE
+
+DELETE FROM students
+WHERE student_id = 101;
+
+├── mini_project_student_management.sql
+
+- Mini Project
+-- Student Management System
+
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(100),
+    branch VARCHAR(50),
+    cgpa DECIMAL(3,2)
+);
+
+-- CREATE
+INSERT INTO students
+(student_id, name, branch, cgpa)
+VALUES
+(101, 'Jahnavi', 'ECE', 8.90),
+(102, 'Ravi', 'CSE', 8.50);
+
+-- READ
+SELECT * FROM students;
+
+-- UPDATE
+UPDATE students
+SET cgpa = 9.10
+WHERE student_id = 101;
+
+-- DELETE
+DELETE FROM students
+WHERE student_id = 102;
+└── README.md
