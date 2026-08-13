@@ -843,3 +843,59 @@ Skill 18: Table Design 🔄
 ## ⏭️ Next
 
 Continue database design and move towards CRUD operations.
+
+# Skill— CRUD Operations
+
+## Phase 2 — Backend & Database
+
+CRUD stands for:
+
+- Create → INSERT
+- Read → SELECT
+- Update → UPDATE
+- Delete → DELETE
+
+## Concepts Learned
+
+- Adding records
+- Reading records
+- Updating records
+- Deleting records
+- Using WHERE with UPDATE and DELETE
+
+## Mini Project
+
+### Student Management System
+
+The project demonstrates basic database operations
+for managing student records.
+
+### Features
+
+- Add student
+- View students
+- Update student details
+- Delete student
+
+## Real-World Application
+
+CRUD operations are the foundation of database-driven
+backend applications such as:
+
+- Student Management Systems
+- E-Learning Platforms
+- User Management Systems
+- AI Interview Platforms
+
+## Interview Preparation
+
+- What is CRUD?
+- Which SQL commands implement CRUD?
+- Why is WHERE important in UPDATE and DELETE?
+- What happens when UPDATE is used without WHERE?
+- What happens when DELETE is used without WHERE?
+
+## Progress
+
+Day 23
+Skill — Completed ✅
