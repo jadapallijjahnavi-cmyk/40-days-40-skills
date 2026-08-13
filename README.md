@@ -899,3 +899,77 @@ backend applications such as:
 
 Day 23
 Skill — Completed ✅
+
+#Day-24 — Primary Key & Foreign Key
+
+## Phase 2 — Backend & Database
+
+## Concepts Learned
+
+### Primary Key
+
+A Primary Key uniquely identifies each record
+in a table.
+
+Example:
+
+student_id → PRIMARY KEY
+
+### Foreign Key
+
+A Foreign Key connects related tables by
+referencing a key from another table.
+
+Example:
+
+enrollments.student_id → FOREIGN KEY
+
+## Key Difference
+
+Primary Key → Identifies a record
+
+Foreign Key → Connects related data
+
+## Mini Project
+
+### Student Course Enrollment System
+
+Three related tables were designed:
+
+Students
+Courses
+Enrollments
+
+### Relationships
+
+Students
+↓
+Enrollments
+↑
+Courses
+
+The Enrollments table contains Foreign Keys
+that connect students and courses.
+
+## Real-World Application
+
+This database design can be used in:
+
+- E-Learning Platforms
+- Student Management Systems
+- Course Management Systems
+- AI Interview Platforms
+
+## Interview Preparation
+
+- What is a Primary Key?
+- What is a Foreign Key?
+- Can a Primary Key contain NULL?
+- Can a Foreign Key contain duplicate values?
+- Can a table have both Primary and Foreign Keys?
+- Why are Foreign Keys important?
+
+## Progress
+
+Day 24
+Skill — Completed ✅
