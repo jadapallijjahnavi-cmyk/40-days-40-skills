@@ -1,0 +1,74 @@
+Skill-20-Primary-Foreign-Key/
+│
+├── 01_primary_key.sql
+-- Skill 20: Primary Key
+
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(100),
+    branch VARCHAR(50)
+);
+
+├── 02_foreign_key.sql
+-- Skill 20: Foreign Key
+
+CREATE TABLE courses (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(100),
+    student_id INT,
+
+    FOREIGN KEY (student_id)
+        REFERENCES students(student_id)
+);
+
+├── mini_project_enrollment_system.sql
+-- Skill 20 Mini Project
+-- Student Course Enrollment System
+
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(150)
+);
+
+CREATE TABLE courses (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(100)
+);
+
+CREATE TABLE enrollments (
+    enrollment_id INT PRIMARY KEY,
+    student_id INT,
+    course_id INT,
+
+    FOREIGN KEY (student_id)
+        REFERENCES students(student_id),
+
+    FOREIGN KEY (course_id)
+        REFERENCES courses(course_id)
+);
+
+-- Sample Students
+INSERT INTO students
+(student_id, name, email)
+VALUES
+(101, 'Jahnavi', 'jahnavi@example.com'),
+(102, 'Ravi', 'ravi@example.com');
+
+-- Sample Courses
+INSERT INTO courses
+(course_id, course_name)
+VALUES
+(1, 'Python'),
+(2, 'SQL'),
+(3, 'Backend Development');
+
+-- Student Course Enrollments
+INSERT INTO enrollments
+(enrollment_id, student_id, course_id)
+VALUES
+(1001, 101, 1),
+(1002, 101, 2),
+(1003, 102, 3);
+
+└── README.md
