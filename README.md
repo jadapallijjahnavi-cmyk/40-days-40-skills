@@ -973,3 +973,465 @@ This database design can be used in:
 
 Day 24
 Skill — Completed ✅
+
+
+
+# Day 25 — Database Joins
+
+
+Today I learned **SQL Database Joins** and how to combine related data from multiple tables.
+
+This skill helped me understand how relational databases connect tables and how backend applications retrieve related information.
+
+---
+
+## 🎯 Learning Objectives
+
+* Understand why JOINs are needed
+* Understand INNER JOIN
+* Understand LEFT JOIN
+* Understand RIGHT JOIN
+* Understand FULL OUTER JOIN concept
+* Join multiple tables
+* Find records without a matching record
+* Choose the correct JOIN based on a requirement
+* Practice placement interview questions
+* Apply JOINs to a real-world mini project
+
+---
+
+## 🔗 What is a JOIN?
+
+A JOIN is used to combine related data from two or more tables using a related column.
+
+Example:
+
+```text
+students
+    ↓
+enrollments
+    ↓
+courses
+```
+
+The tables are connected using related keys.
+
+---
+
+## 🟢 INNER JOIN
+
+### Meaning
+
+Returns only the records that have a match in both tables.
+
+### Example
+
+```sql
+SELECT students.name, courses.course_name
+FROM students
+INNER JOIN enrollments
+ON students.student_id = enrollments.student_id
+INNER JOIN courses
+ON enrollments.course_id = courses.course_id;
+```
+
+### Real-world use
+
+Show only students who are enrolled in a course.
+
+---
+
+## 🔵 LEFT JOIN
+
+### Meaning
+
+Returns:
+
+* All records from the LEFT table
+* Matching records from the RIGHT table
+
+If there is no match, the right-side value becomes `NULL`.
+
+### Example
+
+```sql
+SELECT students.name, courses.course_name
+FROM students
+LEFT JOIN enrollments
+ON students.student_id = enrollments.student_id
+LEFT JOIN courses
+ON enrollments.course_id = courses.course_id;
+```
+
+### Real-world use
+
+Show every student, including students who haven't enrolled in a course.
+
+---
+
+## 🟣 RIGHT JOIN
+
+### Meaning
+
+Returns:
+
+* All records from the RIGHT table
+* Matching records from the LEFT table
+
+### Example
+
+```sql
+SELECT employees.name, departments.department_name
+FROM employees
+RIGHT JOIN departments
+ON employees.employee_id = departments.employee_id;
+```
+
+### Real-world use
+
+Show every department, including departments without employees.
+
+---
+
+## 🟠 FULL OUTER JOIN
+
+### Meaning
+
+Returns records from both tables, whether they match or not.
+
+```text
+Matching records
++
+Only in LEFT table
++
+Only in RIGHT table
+```
+
+### MySQL Note
+
+MySQL does not directly support `FULL OUTER JOIN`.
+
+The same concept can be achieved using `LEFT JOIN`, `RIGHT JOIN`, and `UNION`.
+
+---
+
+# 🧠 JOIN Comparison
+
+| JOIN            | Result                       |
+| --------------- | ---------------------------- |
+| INNER JOIN      | Matching records only        |
+| LEFT JOIN       | All LEFT + matching RIGHT    |
+| RIGHT JOIN      | All RIGHT + matching LEFT    |
+| FULL OUTER JOIN | All records from both tables |
+
+---
+
+# 🔍 Finding Records With No Match
+
+One important pattern I learned:
+
+```sql
+LEFT JOIN
++
+WHERE related_table.id IS NULL
+```
+
+### Example
+
+Find students who haven't enrolled in any course:
+
+```sql
+SELECT students.name
+FROM students
+LEFT JOIN enrollments
+ON students.student_id = enrollments.student_id
+WHERE enrollments.student_id IS NULL;
+```
+
+This returns only students without an enrollment.
+
+---
+
+# 🔗 Three-Table JOIN
+
+I practiced joining three related tables:
+
+```text
+students
+    ↓
+enrollments
+    ↓
+courses
+```
+
+### Relationships
+
+```text
+students.student_id
+        =
+enrollments.student_id
+```
+
+and
+
+```text
+enrollments.course_id
+        =
+courses.course_id
+```
+
+### Query
+
+```sql
+SELECT students.name, courses.course_name
+FROM students
+INNER JOIN enrollments
+ON students.student_id = enrollments.student_id
+INNER JOIN courses
+ON enrollments.course_id = courses.course_id;
+```
+
+---
+
+# 🎤 Placement Interview Questions
+
+I practiced high-priority interview questions such as:
+
+### 1. What is a JOIN?
+
+A JOIN combines related data from multiple tables.
+
+### 2. What is INNER JOIN?
+
+It returns only matching records from both tables.
+
+### 3. What is LEFT JOIN?
+
+It returns all records from the left table and matching records from the right table.
+
+### 4. What is RIGHT JOIN?
+
+It returns all records from the right table and matching records from the left table.
+
+### 5. What is FULL OUTER JOIN?
+
+It returns all records from both tables, including matching and non-matching records.
+
+### 6. Can we JOIN more than two tables?
+
+Yes. Multiple related tables can be joined using multiple JOIN clauses.
+
+### 7. How can we find records with no match?
+
+Using:
+
+```sql
+LEFT JOIN
+WHERE related_table.id IS NULL
+```
+
+### 8. What is the purpose of `ON`?
+
+`ON` specifies the condition that connects the tables.
+
+---
+
+# 🌍 Real-World Understanding
+
+JOINs are heavily used in backend applications because data is usually stored in separate related tables.
+
+### E-Learning
+
+```text
+Students → Enrollments → Courses
+```
+
+### E-Commerce
+
+```text
+Customers → Orders → Products
+```
+
+### AI Interview Platform
+
+```text
+Candidates → Interviews → Results
+```
+
+JOINs allow backend applications to retrieve related information from these tables.
+
+---
+
+# 🛠️ Mini Project
+
+## Student Course Management System
+
+### Tables
+
+* `students`
+* `enrollments`
+* `courses`
+
+### Features Practiced
+
+* Display students with their courses
+* Display all students including students without courses
+* Find students without enrollment
+* Connect three related tables
+* Retrieve related information using SQL JOINs
+
+---
+
+# 💻 Programs Practiced
+
+The following SQL programs were created separately:
+
+```text
+01_inner_join.sql
+02_left_join.sql
+03_right_join.sql
+04_full_outer_join_concept.sql
+05_three_table_join.sql
+06_find_no_match.sql
+07_join_practice_questions.sql
+```
+
+---
+
+# 🧠 Key Takeaways
+
+```text
+INNER JOIN
+→ Matching records
+
+LEFT JOIN
+→ Everything from LEFT
+
+RIGHT JOIN
+→ Everything from RIGHT
+
+FULL OUTER JOIN
+→ Everything from BOTH
+
+LEFT JOIN + IS NULL
+→ Find records with NO match
+```
+
+Most importantly, I learned that JOIN selection depends on the **business requirement** and which table's records need to be preserved.
+
+---
+
+# ✅ Completion
+
+**Day 25/40 — Completed**
+
+### Skill: Database Joins
+
+✔ Concepts learned
+✔ SQL programs practiced
+✔ Multi-table JOIN practiced
+✔ Real-world understanding
+✔ Interview questions practiced
+✔ Mini project completed
+✔ Mastery test completed
+
+---
+
+## 🚀 40 Days 40 Skills
+
+
+Continuing my journey toward becoming an **AI-Driven Backend Engineer**.
+
+
+
+🔥 Day 25 — SQL JOINs Placement Questions
+1. What is a JOIN in SQL?
+
+A JOIN combines related data from two or more tables using a related column.
+
+2. What is INNER JOIN?
+
+It returns only matching records from both tables.
+
+3. What is LEFT JOIN?
+
+It returns all records from the left table and matching records from the right table.
+
+4. What is RIGHT JOIN?
+
+It returns all records from the right table and matching records from the left table.
+
+5. What is FULL OUTER JOIN?
+
+It returns all records from both tables, matching or non-matching.
+
+⚠️ In MySQL, FULL OUTER JOIN isn't directly supported.
+
+6. INNER JOIN vs LEFT JOIN?
+
+INNER: only matching rows.
+LEFT: all left-table rows + matching right-table rows.
+
+7. What is the purpose of ON in a JOIN?
+
+It specifies how the tables are related.
+
+ON students.student_id = enrollments.student_id
+8. Can we JOIN more than two tables?
+
+Yes. We can join multiple related tables.
+
+students
+   ↓
+enrollments
+   ↓
+courses
+9. How do you find records that don't have a match?
+
+Common pattern:
+
+SELECT students.name
+FROM students
+LEFT JOIN enrollments
+    ON students.student_id = enrollments.student_id
+WHERE enrollments.student_id IS NULL;
+10. What is the difference between ON and WHERE?
+
+ON defines how tables are joined.
+
+WHERE filters the resulting records.
+
+💻 Coding Questions — Very Important
+Q11. Display customers who placed orders.
+SELECT customers.name, orders.product
+FROM customers
+INNER JOIN orders
+ON customers.customer_id = orders.customer_id;
+Q12. Display all customers, including those without orders.
+SELECT customers.name, orders.product
+FROM customers
+LEFT JOIN orders
+ON customers.customer_id = orders.customer_id;
+Q13. Find students without any enrollment.
+SELECT students.name
+FROM students
+LEFT JOIN enrollments
+ON students.student_id = enrollments.student_id
+WHERE enrollments.student_id IS NULL;
+Q14. Join three tables: Students → Enrollments → Courses.
+SELECT students.name, courses.course_name
+FROM students
+INNER JOIN enrollments
+ON students.student_id = enrollments.student_id
+INNER JOIN courses
+ON enrollments.course_id = courses.course_id;
+🎯 Placement Priority
+
+If you're short on time, master these first:
+
+1 → JOIN definition
+2 → INNER vs LEFT JOIN
+3 → LEFT JOIN + IS NULL
+4 → 3-table JOIN
+5 → ON vs WHERE
+6 → Write JOIN queries yourself
