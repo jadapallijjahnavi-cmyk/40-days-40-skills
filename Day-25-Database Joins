@@ -1,0 +1,169 @@
+Day-25-Database-Joins/
+│
+├── 01_inner_join.sql
+├── 02_left_join.sql
+├── 03_right_join.sql
+├── 04_full_outer_join_concept.sql
+├── 05_three_table_join.sql
+├── 06_find_no_match.sql
+├── 07_practice_questions.sql
+└── README.md
+
+1. 01_inner_join.sql
+-- INNER JOIN
+-- Only matching records
+
+
+SELECT students.name, courses.course_name
+FROM students
+INNER JOIN enrollments
+    ON students.student_id = enrollments.student_id
+INNER JOIN courses
+    ON enrollments.course_id = courses.course_id;
+
+Meaning: Course lo enrolled unna students matrame display avutaaru.
+
+2. 02_left_join.sql
+-- LEFT JOIN
+-- All students + matching courses
+
+
+SELECT students.name, courses.course_name
+FROM students
+LEFT JOIN enrollments
+    ON students.student_id = enrollments.student_id
+LEFT JOIN courses
+    ON enrollments.course_id = courses.course_id;
+
+Meaning: Course lekapoyina every student display avutadu.
+
+3. 03_right_join.sql
+-- RIGHT JOIN
+-- All departments + matching employees
+
+
+SELECT employees.name, departments.department_name
+FROM employees
+RIGHT JOIN departments
+    ON employees.employee_id = departments.employee_id;
+
+Meaning: Employee lekapoyina every department display avutundi.
+
+4. 04_full_outer_join_concept.sql
+
+MySQL lo direct FULL OUTER JOIN support cheyyadu. So UNION use chesi same concept achieve cheyyachu.
+
+-- FULL OUTER JOIN using UNION in MySQL
+
+
+SELECT customers.name, orders.product
+FROM customers
+LEFT JOIN orders
+    ON customers.customer_id = orders.customer_id
+
+
+UNION
+
+
+SELECT customers.name, orders.product
+FROM customers
+RIGHT JOIN orders
+    ON customers.customer_id = orders.customer_id;
+
+Meaning: Both tables lo unna matching + non-matching records include avutayi.
+
+5. 05_three_table_join.sql
+
+Mana main practice:
+
+students
+    ↓
+enrollments
+    ↓
+courses
+
+Code:
+
+-- Three-table JOIN
+
+
+SELECT students.name, courses.course_name
+FROM students
+INNER JOIN enrollments
+    ON students.student_id = enrollments.student_id
+INNER JOIN courses
+    ON enrollments.course_id = courses.course_id;
+
+Relationships:
+
+students.student_id = enrollments.student_id
+
+
+enrollments.course_id = courses.course_id
+6. 06_find_no_match.sql
+
+Students course enroll avvakapothe find cheyyadaniki:
+
+-- Find students who have NOT enrolled in any course
+
+
+SELECT students.name
+FROM students
+LEFT JOIN enrollments
+    ON students.student_id = enrollments.student_id
+WHERE enrollments.student_id IS NULL;
+
+Important pattern:
+
+LEFT JOIN
++
+WHERE related_table.id IS NULL
+
+👉 Related record leni records ni find cheyyadaniki use chestam.
+
+7. 07_join_practice_questions.sql
+
+Idi practice kosam:
+
+-- DAY 25 JOIN PRACTICE
+
+
+-- Q1:
+-- Show only customers who have placed an order.
+-- Use INNER JOIN.
+
+
+
+
+-- Q2:
+-- Show every customer, including customers
+-- who have never placed an order.
+-- Use LEFT JOIN.
+
+
+
+
+-- Q3:
+-- Show every department, including departments
+-- that have no employees.
+-- Use LEFT JOIN or RIGHT JOIN depending on
+-- which table you place on the left.
+
+
+
+
+-- Q4:
+-- Find students who have NOT enrolled in any course.
+-- Hint:
+-- LEFT JOIN + WHERE ... IS NULL
+
+
+
+
+-- Q5:
+-- Connect these three tables:
+-- students → enrollments → courses
+--
+-- Relationships:
+-- students.student_id = enrollments.student_id
+-- enrollments.course_id = courses.course_id
