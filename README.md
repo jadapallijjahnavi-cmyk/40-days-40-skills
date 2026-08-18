@@ -1435,3 +1435,305 @@ If you're short on time, master these first:
 4 → 3-table JOIN
 5 → ON vs WHERE
 6 → Write JOIN queries yourself
+
+# Day 26 — Database Indexing
+
+## 📚 Skill : Database Indexing
+
+Today I learned **Database Indexing**, an important concept for improving database query performance.
+
+---
+
+## 🎯 What is an Index?
+
+A database index is a data structure that helps the database find records more efficiently.
+
+A simple analogy is a book.
+
+Without an index:
+
+```text
+Search → Check many pages → Find information
+```
+
+With an index:
+
+```text
+Search → Index → Locate information faster
+```
+
+The same basic idea applies to database indexes.
+
+---
+
+## 💻 What I Learned
+
+* What database indexing is
+* Why indexes can improve search performance
+* `CREATE INDEX`
+* `DROP INDEX`
+* Composite indexes
+* Index vs Primary Key
+* Index trade-offs
+* `EXPLAIN`
+* Choosing suitable columns for indexing
+* Applying indexing to real-world queries
+
+---
+
+## 1. CREATE INDEX
+
+Syntax:
+
+```sql
+CREATE INDEX index_name
+ON table_name(column_name);
+```
+
+Example:
+
+```sql
+CREATE INDEX idx_student_email
+ON students(email);
+```
+
+This creates an index on the `email` column.
+
+---
+
+## 2. DROP INDEX
+
+An index can be removed when it is no longer needed.
+
+```sql
+DROP INDEX idx_student_email
+ON students;
+```
+
+This removes the index, not the table or its records.
+
+---
+
+## 3. Composite Index
+
+A composite index uses multiple columns.
+
+```sql
+CREATE INDEX idx_customer_date
+ON orders(customer_id, order_date);
+```
+
+This can be useful when queries frequently use these columns together.
+
+Example:
+
+```sql
+SELECT *
+FROM orders
+WHERE customer_id = 501
+AND order_date = '2026-08-18';
+```
+
+### Important
+
+The order of columns in a composite index matters.
+
+---
+
+## 4. EXPLAIN
+
+I learned how `EXPLAIN` can be used to inspect a query's execution plan.
+
+```sql
+EXPLAIN
+SELECT *
+FROM orders
+WHERE customer_id = 501;
+```
+
+It helps developers investigate how the database plans to execute a query and whether an index may be used.
+
+---
+
+## ⚖️ Index Trade-offs
+
+Indexes are not always free.
+
+### Benefits
+
+* Faster lookup/search operations
+* Can improve query performance
+* Useful for frequently filtered or searched columns
+
+### Costs
+
+* Require additional storage
+* Can add overhead to `INSERT`
+* Can add overhead to `UPDATE`
+* Can add overhead to `DELETE`
+
+Therefore:
+
+> **Do not create indexes on every column.**
+
+Indexes should be chosen based on actual query patterns and performance requirements.
+
+---
+
+## 🔑 Primary Key vs Index
+
+A Primary Key and an Index are not the same concept.
+
+### Primary Key
+
+Used to uniquely identify records.
+
+### Index
+
+Used primarily to improve data access/search performance.
+
+A Primary Key generally has an associated index automatically in relational databases.
+
+---
+
+## 🌍 Real-World Importance
+
+Indexing becomes especially important when databases contain large amounts of data.
+
+For example, an e-commerce application may have millions of orders.
+
+```text
+Customers
+    ↓
+Orders
+    ↓
+Products
+```
+
+If the application frequently searches:
+
+```sql
+SELECT *
+FROM orders
+WHERE customer_id = 501;
+```
+
+an index on `customer_id` may improve lookup performance.
+
+Indexes are important in systems such as:
+
+* E-commerce
+* Banking
+* E-learning
+* Employee management
+* Customer management
+* Backend APIs
+* Data-intensive applications
+
+---
+
+## 🛠️ Practical Scenario
+
+I practiced an e-commerce scenario with:
+
+```text
+orders
+----------------
+order_id
+customer_id
+product_id
+order_date
+status
+```
+
+For frequent queries involving:
+
+```text
+customer_id
+order_date
+```
+
+I practiced creating a composite index:
+
+```sql
+CREATE INDEX idx_customer_date
+ON orders(customer_id, order_date);
+```
+
+I also used `EXPLAIN` to investigate query execution.
+
+---
+
+## 🎤 Placement Interview Questions
+
+### Q1. What is an index?
+
+An index is a database structure that can help improve the efficiency of data lookups.
+
+### Q2. Why are indexes used?
+
+They are mainly used to improve search and query performance.
+
+### Q3. What is a composite index?
+
+An index created using multiple columns.
+
+### Q4. Does an index always improve performance?
+
+No. It can improve reads but may add storage and write overhead.
+
+### Q5. What does `DROP INDEX` do?
+
+It removes the specified index.
+
+### Q6. Why is `EXPLAIN` used?
+
+It helps inspect how the database plans to execute a query.
+
+### Q7. Should every column have an index?
+
+No. Indexes should be created based on actual query patterns and requirements.
+
+---
+
+## 🧠 Key Takeaway
+
+The biggest lesson I learned:
+
+> **Good indexing is about choosing the right indexes for the queries the application actually performs.**
+
+More indexes do not automatically mean better performance.
+
+---
+
+# 📂 Programs Practiced
+
+```text
+01_create_index.sql
+02_drop_index.sql
+03_composite_index.sql
+04_explain_query.sql
+05_real_world_indexing.sql
+06_indexing_practice.sql
+```
+
+---
+
+# ✅ Day 26 Completion
+
+**Skill  — Database Indexing: COMPLETED**
+
+✔ Concepts learned
+✔ SQL programs practiced
+✔ Composite indexes practiced
+✔ `EXPLAIN` practiced
+✔ Real-world scenario
+✔ Placement questions
+✔ Final test — 5/5
+
+## 🚀 40 Days 40 Skills
+
+**Day 26/40 — Completed**
+
+Continuing my journey toward becoming an **AI-Driven Backend Engineer**.
+
