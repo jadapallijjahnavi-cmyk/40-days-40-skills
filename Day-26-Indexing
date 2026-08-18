@@ -1,0 +1,108 @@
+Day-26-Indexing/
+│
+├── 01_create_index.sql
+
+-- Day 26: Create Index
+
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    email VARCHAR(100)
+);
+
+INSERT INTO students VALUES
+(101, 'Jahnavi', 'jahnavi@gmail.com'),
+(102, 'Ravi', 'ravi@gmail.com'),
+(103, 'Priya', 'priya@gmail.com');
+
+-- Create an index on email
+CREATE INDEX idx_student_email
+ON students(email);
+
+-- Search using the indexed column
+SELECT *
+FROM students
+WHERE email = 'jahnavi@gmail.com';
+
+├── 02_drop_index.sql
+
+-- Day 26: Drop Index
+
+CREATE INDEX idx_student_email
+ON students(email);
+
+-- Remove the index
+DROP INDEX idx_student_email
+ON students;
+
+├── 03_composite_index.sql
+
+-- Day 26: Composite Index
+
+CREATE INDEX idx_customer_date
+ON orders(customer_id, order_date);
+
+-- Example query that uses both columns
+SELECT *
+FROM orders
+WHERE customer_id = 501
+AND order_date = '2026-08-18';
+
+├── 04_explain_query.sql
+
+
+-- Day 26: EXPLAIN
+
+EXPLAIN
+SELECT *
+FROM orders
+WHERE customer_id = 501;
+
+├── 05_real_world_indexing.sql
+
+
+-- Day 26: Real-world E-commerce Example
+
+-- Frequently searched column
+CREATE INDEX idx_orders_customer
+ON orders(customer_id);
+
+-- Frequently searched combination
+CREATE INDEX idx_customer_date
+ON orders(customer_id, order_date);
+
+-- Query
+SELECT *
+FROM orders
+WHERE customer_id = 501
+AND order_date = '2026-08-18';
+
+-- Check the query execution plan
+EXPLAIN
+SELECT *
+FROM orders
+WHERE customer_id = 501
+AND order_date = '2026-08-18';
+
+└── 06_indexing_practice.sql
+
+-- Day 26: Indexing Practice
+
+-- Q1. Create an index on users(email).
+
+-- Q2. Create an index named idx_product_code
+--     on products(product_code).
+
+-- Q3. Create a composite index on
+--     orders(customer_id, order_date).
+
+-- Q4. Remove the index idx_product_code.
+
+-- Q5. Use EXPLAIN to inspect:
+--     SELECT * FROM orders
+--     WHERE customer_id = 101;
+
+-- Q6. Why should we NOT create indexes on every column?
+
+-- Q7. Which column would you consider indexing
+--     if an application frequently searches by email?
