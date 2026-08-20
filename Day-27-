@@ -1,0 +1,171 @@
+Day-27-Transactions/
+│
+├── 01_basic_transaction.sql
+├── 02_commit.sql
+├── 03_rollback.sql
+├── 04_savepoint.sql
+├── 05_bank_transfer.sql
+├── 06_ecommerce_transaction.sql
+└── 07_transaction_practice.sql
+
+01_basic_transaction.sql
+-- Day 27: Basic Transaction
+
+
+START TRANSACTION;
+
+
+UPDATE accounts
+SET balance = balance - 1000
+WHERE account_id = 101;
+
+
+UPDATE accounts
+SET balance = balance + 1000
+WHERE account_id = 102;
+
+
+COMMIT;
+02_commit.sql
+-- Day 27: COMMIT
+
+
+START TRANSACTION;
+
+
+UPDATE accounts
+SET balance = balance - 500
+WHERE account_id = 101;
+
+
+UPDATE accounts
+SET balance = balance + 500
+WHERE account_id = 102;
+
+
+-- Save all successful changes
+COMMIT;
+03_rollback.sql
+-- Day 27: ROLLBACK
+
+
+START TRANSACTION;
+
+
+UPDATE accounts
+SET balance = balance - 1000
+WHERE account_id = 101;
+
+
+-- Something went wrong
+-- Undo the transaction
+
+
+ROLLBACK;
+04_savepoint.sql
+-- Day 27: SAVEPOINT
+
+
+START TRANSACTION;
+
+
+UPDATE accounts
+SET balance = balance - 500
+WHERE account_id = 101;
+
+
+SAVEPOINT after_debit;
+
+
+UPDATE accounts
+SET balance = balance + 500
+WHERE account_id = 102;
+
+
+-- Return to the savepoint
+ROLLBACK TO SAVEPOINT after_debit;
+
+
+COMMIT;
+05_bank_transfer.sql
+-- Day 27: Real-world Bank Transfer
+
+
+START TRANSACTION;
+
+
+-- Debit Account A
+UPDATE accounts
+SET balance = balance - 2000
+WHERE account_id = 101;
+
+
+-- Credit Account B
+UPDATE accounts
+SET balance = balance + 2000
+WHERE account_id = 102;
+
+
+-- If everything is successful
+COMMIT;
+
+
+-- If something fails, use:
+-- ROLLBACK;
+06_ecommerce_transaction.sql
+-- Day 27: E-commerce Transaction
+
+
+START TRANSACTION;
+
+
+-- Create order
+INSERT INTO orders
+(order_id, customer_id, product_id, quantity, status)
+VALUES
+(5001, 101, 201, 1, 'PLACED');
+
+
+-- Reduce product stock
+UPDATE products
+SET stock = stock - 1
+WHERE product_id = 201
+AND stock > 0;
+
+
+-- Save if all operations succeed
+COMMIT;
+
+
+-- If a critical operation fails:
+-- ROLLBACK;
+07_transaction_practice.sql
+-- Day 27: Transaction Practice
+
+
+-- Q1. Start a transaction.
+
+
+-- Q2. Deduct 1000 from account 101.
+
+
+-- Q3. Add 1000 to account 102.
+
+
+-- Q4. Commit the transaction.
+
+
+-- Q5. Create a SAVEPOINT named payment_done.
+
+
+-- Q6. Roll back to payment_done.
+
+
+-- Q7. Write a ROLLBACK statement.
+
+
+-- Q8. Explain the four ACID properties:
+-- Atomicity
+-- Consistency
+-- Isolation
+-- Durability
