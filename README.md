@@ -1737,3 +1737,351 @@ More indexes do not automatically mean better performance.
 
 Continuing my journey toward becoming an **AI-Driven Backend Engineer**.
 
+
+# Day 27 — Database Transactions
+
+## 📚 Skill : Database Transactions
+
+Today I learned **Database Transactions**, an important concept for maintaining reliable and consistent data in backend applications.
+
+---
+
+## 🎯 What is a Transaction?
+
+A transaction is a group of database operations treated as **one logical unit of work**.
+
+For example, a bank transfer may involve:
+
+```text
+Account A → Debit ₹1,000
+Account B → Credit ₹1,000
+```
+
+Both operations are related.
+
+If the debit succeeds but the credit fails, the database should not be left in a partially completed state.
+
+Transactions help handle this situation.
+
+---
+
+## 💻 What I Learned
+
+* What a database transaction is
+* `START TRANSACTION`
+* `COMMIT`
+* `ROLLBACK`
+* `SAVEPOINT`
+* `ROLLBACK TO SAVEPOINT`
+* ACID properties
+* Bank transfer transactions
+* E-commerce transactions
+* Transaction reliability
+* Placement interview questions
+
+---
+
+## 1. START TRANSACTION
+
+Starts a transaction.
+
+```sql
+START TRANSACTION;
+```
+
+Example:
+
+```sql
+START TRANSACTION;
+
+UPDATE accounts
+SET balance = balance - 1000
+WHERE account_id = 101;
+
+UPDATE accounts
+SET balance = balance + 1000
+WHERE account_id = 102;
+
+COMMIT;
+```
+
+---
+
+## 2. COMMIT
+
+`COMMIT` successfully completes the transaction and saves its changes.
+
+```sql
+COMMIT;
+```
+
+### Easy way to remember:
+
+```text
+COMMIT → Save changes
+```
+
+---
+
+## 3. ROLLBACK
+
+`ROLLBACK` cancels the changes made in the current transaction.
+
+```sql
+START TRANSACTION;
+
+UPDATE accounts
+SET balance = balance - 1000
+WHERE account_id = 101;
+
+ROLLBACK;
+```
+
+### Easy way to remember:
+
+```text
+ROLLBACK → Undo transaction changes
+```
+
+---
+
+## 4. SAVEPOINT
+
+A `SAVEPOINT` creates a checkpoint inside a transaction.
+
+```sql
+START TRANSACTION;
+
+UPDATE accounts
+SET balance = balance - 500
+WHERE account_id = 101;
+
+SAVEPOINT after_debit;
+
+UPDATE accounts
+SET balance = balance + 500
+WHERE account_id = 102;
+
+ROLLBACK TO SAVEPOINT after_debit;
+
+COMMIT;
+```
+
+`ROLLBACK TO SAVEPOINT` allows us to return to that checkpoint instead of rolling back the entire transaction.
+
+---
+
+# 🔐 ACID Properties
+
+ACID is one of the most important concepts for database and backend interviews.
+
+## A — Atomicity
+
+All operations in a transaction succeed, or the transaction is rolled back.
+
+```text
+Debit ✅
+Credit ❌
+   ↓
+ROLLBACK
+```
+
+**Atomicity = All or Nothing**
+
+---
+
+## C — Consistency
+
+A transaction should preserve the database's rules and constraints and move it from one valid state to another valid state.
+
+```text
+Valid State
+     ↓
+ Transaction
+     ↓
+Valid State
+```
+
+**Consistency = Valid Database State**
+
+---
+
+## I — Isolation
+
+Isolation controls how concurrent transactions interact so that they do not incorrectly interfere with one another.
+
+For example, multiple customers may try to purchase the same product at nearly the same time.
+
+**Isolation = Proper handling of concurrent transactions**
+
+---
+
+## D — Durability
+
+Once a transaction has been successfully committed, its changes should persist even if the system later experiences a failure.
+
+```text
+COMMIT
+  ↓
+Changes Persist
+```
+
+**Durability = Committed data stays**
+
+---
+
+# 🌍 Real-World Importance
+
+Transactions are important wherever multiple database operations must remain reliable.
+
+### 🏦 Banking
+
+A money transfer may involve:
+
+```text
+Debit Account A
+       ↓
+Credit Account B
+```
+
+If one operation fails, the transaction can be rolled back.
+
+### 🛒 E-commerce
+
+Placing an order may involve:
+
+```text
+Create Order
+     ↓
+Reduce Stock
+     ↓
+Record Payment/Order Information
+```
+
+These related operations may need transactional handling.
+
+### 🎓 E-learning
+
+An enrollment process may involve:
+
+```text
+Create Enrollment
+      ↓
+Update Course Capacity
+      ↓
+Record Payment
+```
+
+Transactions help prevent incomplete database changes.
+
+---
+
+# 🛠️ Practical Scenario
+
+I practiced a bank transfer:
+
+```sql
+START TRANSACTION;
+
+UPDATE accounts
+SET balance = balance - 2000
+WHERE account_id = 101;
+
+UPDATE accounts
+SET balance = balance + 2000
+WHERE account_id = 102;
+
+COMMIT;
+```
+
+If something goes wrong:
+
+```sql
+ROLLBACK;
+```
+
+---
+
+# 🎤 Placement Interview Questions
+
+### Q1. What is a transaction?
+
+A transaction is a group of database operations treated as one logical unit of work.
+
+### Q2. What is COMMIT?
+
+`COMMIT` successfully saves the transaction's changes.
+
+### Q3. What is ROLLBACK?
+
+`ROLLBACK` undoes changes made in the current transaction.
+
+### Q4. What is a SAVEPOINT?
+
+A SAVEPOINT creates a checkpoint inside a transaction to which we can roll back.
+
+### Q5. What are ACID properties?
+
+ACID stands for:
+
+* Atomicity
+* Consistency
+* Isolation
+* Durability
+
+### Q6. What is Atomicity?
+
+Atomicity means that a transaction's operations are treated as one unit: they all succeed, or the transaction is rolled back.
+
+### Q7. Why are transactions important in banking?
+
+They help ensure that related operations such as debit and credit are handled reliably instead of leaving partially completed changes.
+
+---
+
+# 🧠 Key Takeaway
+
+The biggest lesson from Day 27:
+
+> **Transactions help backend applications maintain reliable and consistent data when multiple database operations belong together.**
+
+Understanding `COMMIT`, `ROLLBACK`, `SAVEPOINT`, and ACID properties is essential for working with real-world databases.
+
+---
+
+# 📂 Programs Practiced
+
+```text
+01_basic_transaction.sql
+02_commit.sql
+03_rollback.sql
+04_savepoint.sql
+05_bank_transfer.sql
+06_ecommerce_transaction.sql
+07_transaction_practice.sql
+```
+
+---
+
+# ✅ Day 27 Completion
+
+**Skill 23 — Database Transactions: COMPLETED**
+
+✔ Concepts learned
+✔ SQL programs practiced
+✔ COMMIT practiced
+✔ ROLLBACK practiced
+✔ SAVEPOINT practiced
+✔ ACID properties learned
+✔ Banking scenario
+✔ E-commerce scenario
+✔ Placement questions
+✔ Final test — 5/5
+
+## 🚀 40 Days 40 Skills
+
+**Day 27/40 — Completed**
+
+Continuing my journey toward becoming an **AI-Driven Backend Engineer**.
+
+
