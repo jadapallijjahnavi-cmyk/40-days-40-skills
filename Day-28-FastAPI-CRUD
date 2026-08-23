@@ -1,0 +1,131 @@
+Day-28-FastAPI-CRUD/
+│
+├── 01_basic_fastapi.py
+├── 02_get_all_students.py
+├── 03_get_student_by_id.py
+├── 04_create_student.py
+├── 05_update_student.py
+├── 06_delete_student.py
+└── 07_crud_practice.py
+
+
+01_basic_fastapi.py
+
+ Basic FastAPI
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/")
+def home():
+    return {"message": "Welcome to Student API"}
+
+02_get_all_students.py
+
+ Get All Students
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/students")
+def get_students():
+    pass
+
+03_get_student_by_id.py
+
+ Get Student by ID
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/students/{student_id}")
+def get_student(student_id: int):
+    pass
+
+04_create_student.py
+
+ Create Student
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.post("/students")
+def create_student():
+    pass
+
+05_update_student.py
+
+ Update Student
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.put("/students/{student_id}")
+def update_student(student_id: int):
+    pass
+
+06_delete_student.py
+
+ Delete Student
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.delete("/students/{student_id}")
+def delete_student(student_id: int):
+    pass
+
+07_crud_practice.py
+
+ CRUD Practice
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+# Q1. Create a POST route to create a student.
+
+
+# Q2. Create a GET route to get all students.
+
+
+# Q3. Create a GET route to get one student
+# using student_id as an integer.
+
+
+# Q4. Create a PUT route to update a student
+# using student_id.
+
+
+# Q5. Create a DELETE route to delete a student
+# using student_id.
+
+
+# Q6. Write the CRUD operations:
+
+# Create → ?
+# Read   → ?
+# Update → ?
+# Delete → ?
+
+
+# Q7. What is the difference between:
+
+# GET /students
+
+# and
+
+# GET /students/{student_id}
