@@ -2085,3 +2085,536 @@ Understanding `COMMIT`, `ROLLBACK`, `SAVEPOINT`, and ACID properties is essentia
 Continuing my journey toward becoming an **AI-Driven Backend Engineer**.
 
 
+
+# Day 28 — FastAPI CRUD Operations
+ FastAPI CRUD Operations
+
+Today I learned the basics of **FastAPI API routing and CRUD operations**.
+
+CRUD is one of the most important foundations of backend development because backend applications need to create, read, update, and delete data.
+
+---
+
+## 🎯 What is FastAPI?
+
+FastAPI is a Python framework used to build APIs and backend applications.
+
+A basic FastAPI application:
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+## 💻 What I Learned
+
+* FastAPI basics
+* API routes
+* GET
+* POST
+* PUT
+* DELETE
+* CRUD operations
+* Path parameters
+* Getting all students
+* Getting one student using ID
+* Creating a student
+* Updating a student
+* Deleting a student
+* Basic API request flow
+
+---
+
+# 🔗 API Routes
+
+An API route connects an HTTP method and URL with a Python function.
+
+Example:
+
+```python
+@app.get("/students")
+def get_students():
+    pass
+```
+
+Here:
+
+```text
+GET → HTTP method
+/students → URL path
+get_students() → Function
+```
+
+When a client sends:
+
+```text
+GET /students
+```
+
+FastAPI calls:
+
+```python
+get_students()
+```
+
+---
+
+# 🔄 CRUD Operations
+
+CRUD stands for:
+
+```text
+C → Create
+R → Read
+U → Update
+D → Delete
+```
+
+| CRUD   | HTTP Method | Purpose     |
+| ------ | ----------- | ----------- |
+| Create | POST        | Add data    |
+| Read   | GET         | Get data    |
+| Update | PUT         | Change data |
+| Delete | DELETE      | Remove data |
+
+Easy way to remember:
+
+```text
+CREATE → POST
+READ   → GET
+UPDATE → PUT
+DELETE → DELETE
+
+
+# 1. CREATE — POST
+
+To create a new student:
+
+```python
+@app.post("/students")
+def create_student():
+    pass
+```
+
+Request:
+
+```text
+POST /students
+```
+
+This means:
+
+> Create a new student.
+
+---
+
+# 2. READ — GET All Students
+
+To get all students:
+
+```python
+@app.get("/students")
+def get_students():
+    pass
+```
+
+Request:
+
+```text
+GET /students
+```
+
+This means:
+
+> Get all students.
+
+---
+
+# 3. READ — GET One Student
+
+To get one specific student:
+
+```python
+@app.get("/students/{student_id}")
+def get_student(student_id: int):
+    pass
+```
+
+Example:
+
+```text
+GET /students/101
+```
+
+Here:
+
+```text
+student_id = 101
+```
+
+This means:
+
+> Get the student whose ID is 101.
+
+---
+
+# 🔍 Difference Between the GET Routes
+
+```text
+GET /students
+```
+
+→ Get all students.
+
+```text
+GET /students/101
+```
+
+→ Get one specific student.
+
+---
+
+# 4. UPDATE — PUT
+
+To update a student:
+
+```python
+@app.put("/students/{student_id}")
+def update_student(student_id: int):
+    pass
+```
+
+Example:
+
+```text
+PUT /students/101
+```
+
+This means:
+
+> Update student 101.
+
+---
+
+# 5. DELETE — DELETE
+
+To delete a student:
+
+```python
+@app.delete("/students/{student_id}")
+def delete_student(student_id: int):
+    pass
+```
+
+Example:
+
+```text
+DELETE /students/101
+```
+
+This means:
+
+> Delete student 101.
+
+---
+
+# 🔥 Complete CRUD Routes
+
+```python
+@app.post("/students")
+def create_student():
+    pass
+
+
+@app.get("/students")
+def get_students():
+    pass
+
+
+@app.get("/students/{student_id}")
+def get_student(student_id: int):
+    pass
+
+
+@app.put("/students/{student_id}")
+def update_student(student_id: int):
+    pass
+
+
+@app.delete("/students/{student_id}")
+def delete_student(student_id: int):
+    pass
+```
+
+---
+
+# 🧩 Path Parameter
+
+In:
+
+```python
+@app.get("/students/{student_id}")
+def get_student(student_id: int):
+    pass
+```
+
+`student_id` is a **path parameter**.
+
+For example:
+
+```text
+GET /students/101
+```
+
+FastAPI takes:
+
+```text
+101
+```
+
+and passes it to:
+
+```python
+student_id
+```
+
+So:
+
+```text
+student_id = 101
+```
+
+The `: int` means the value should be an integer.
+
+---
+
+# 🌍 Real-World Example
+
+Imagine a Student Management System.
+
+### Create
+
+```text
+POST /students
+```
+
+→ Add a new student.
+
+### Read
+
+```text
+GET /students
+```
+
+→ Get all students.
+
+### Read One
+
+```text
+GET /students/101
+```
+
+→ Get student 101.
+
+### Update
+
+```text
+PUT /students/101
+```
+
+→ Update student 101.
+
+### Delete
+
+```text
+DELETE /students/101
+```
+
+→ Delete student 101.
+
+---
+
+# 🔄 Basic Backend Flow
+
+```text
+Client
+   ↓
+HTTP Request
+   ↓
+FastAPI Route
+   ↓
+Backend Logic
+   ↓
+Database
+   ↓
+Response
+   ↓
+Client
+```
+
+For example:
+
+```text
+Client
+   ↓
+GET /students/101
+   ↓
+FastAPI
+   ↓
+get_student(101)
+   ↓
+Database
+   ↓
+Student Data
+   ↓
+Response
+```
+
+---
+
+# 🏢 Where CRUD is Used
+
+CRUD operations are used in many applications.
+
+### 🎓 Student Management
+
+Create, read, update, and delete students.
+
+### 🛒 E-commerce
+
+Create, read, update, and delete products.
+
+### 👤 User Management
+
+Create, read, update, and delete users.
+
+### 👨‍💼 Employee Management
+
+Create, read, update, and delete employees.
+
+---
+
+# 🎤 Placement Interview Questions
+
+### Q1. What is CRUD?
+
+CRUD stands for:
+
+* Create
+* Read
+* Update
+* Delete
+
+---
+
+### Q2. Which HTTP method is used to create data?
+
+`POST`
+
+---
+
+### Q3. Which HTTP method is used to read data?
+
+`GET`
+
+---
+
+### Q4. Which HTTP method is used to update data?
+
+`PUT`
+
+---
+
+### Q5. Which HTTP method is used to delete data?
+
+`DELETE`
+
+---
+
+### Q6. What is the difference between:
+
+```text
+GET /students
+```
+
+and
+
+```text
+GET /students/101
+```
+
+`GET /students` gets all students.
+
+`GET /students/101` gets one specific student.
+
+---
+
+### Q7. What is a path parameter?
+
+A value in the URL used to identify a specific resource.
+
+Example:
+
+```text
+/students/101
+```
+
+Here `101` is the `student_id`.
+
+---
+
+# 🧠 Key Takeaway
+
+The biggest lesson from Day 28:
+
+> **FastAPI routes connect HTTP requests to backend functions, and CRUD operations provide the basic actions for managing data.**
+
+The main connection is:
+
+```text
+HTTP Method
+     ↓
+API Route
+     ↓
+Backend Function
+     ↓
+Database
+     ↓
+Response
+```
+
+---
+
+# 📂 Programs Practiced
+
+```text
+01_basic_fastapi.py
+02_get_all_students.py
+03_get_student_by_id.py
+04_create_student.py
+05_update_student.py
+06_delete_student.py
+07_crud_practice.py
+```
+
+---
+
+ — FastAPI CRUD Operations: COMPLETED**
+
+✔ FastAPI basics
+✔ API routing
+✔ GET
+✔ POST
+✔ PUT
+✔ DELETE
+✔ CRUD operations
+✔ Path parameters
+✔ Student API practice
+✔ Placement questions
+
+
+
+**Day 28/40 — Completed ✅**
+
+
