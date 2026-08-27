@@ -1,0 +1,164 @@
+Day-30-Response-Models/
+│
+├── 01_basic_response_model.py
+
+#  Basic Response Model
+
+from pydantic import BaseModel
+
+
+class StudentResponse(BaseModel):
+    name: str
+    age: int
+    branch: str
+
+
+student = StudentResponse(
+    name="Jahnavi",
+    age=20,
+    branch="ECE"
+)
+
+print(student)
+
+├── 02_student_response_model.py
+
+# Student Response Model
+
+from pydantic import BaseModel
+
+
+class StudentResponse(BaseModel):
+    name: str
+    age: int
+    branch: str
+
+
+student = StudentResponse(
+    name="Jahnavi",
+    age=20,
+    branch="ECE"
+)
+
+print("Name:", student.name)
+print("Age:", student.age)
+print("Branch:", student.branch)
+
+├── 03_response_model_route.py
+
+#  FastAPI Response Model
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+
+class StudentResponse(BaseModel):
+    name: str
+    age: int
+    branch: str
+
+
+@app.get("/students", response_model=StudentResponse)
+def get_student():
+    return {
+        "name": "Jahnavi",
+        "age": 20,
+        "branch": "ECE"
+    }
+
+├── 04_response_model_filter.py
+
+#  Response Model Filtering
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+
+class StudentResponse(BaseModel):
+    name: str
+    age: int
+    branch: str
+
+
+@app.get("/students", response_model=StudentResponse)
+def get_student():
+    return {
+        "name": "Jahnavi",
+        "age": 20,
+        "branch": "ECE",
+        "password": "secret"
+    }
+
+├── 05_student_api_response.py
+
+# Student API Response
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+
+class StudentResponse(BaseModel):
+    name: str
+    age: int
+    branch: str
+
+
+@app.get("/students/{student_id}", response_model=StudentResponse)
+def get_student(student_id: int):
+    return {
+        "name": "Jahnavi",
+        "age": 20,
+        "branch": "ECE"
+    }
+
+└── 06_response_model_practice.py
+
+#  Response Model Practice
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+
+# Q1. Create a Pydantic model named StudentResponse.
+
+
+# Q2. Add these fields:
+# name → string
+# age → integer
+# branch → string
+
+
+# Q3. Create a GET route:
+# GET /students
+
+
+# Q4. Add response_model=StudentResponse.
+
+
+# Q5. Return student data from the route.
+
+
+# Q6. Create another GET route:
+# GET /students/{student_id}
+
+
+# Q7. Use StudentResponse as the response model.
+
+
+# Q8. What is a Response Model?
+
+
+# Q9. What is the difference between
+# Request Model and Response Model?
+
+
+# Q10. What is the purpose of:
+# response_model=StudentResponse
