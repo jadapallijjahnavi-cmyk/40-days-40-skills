@@ -1,0 +1,152 @@
+Day-29-Pydantic-Validation/
+│
+├── 01_basic_pydantic.py
+
+# Basic Pydantic Model
+
+from pydantic import BaseModel
+
+
+class Student(BaseModel):
+    name: str
+    age: int
+    branch: str
+
+
+student = Student(
+    name="Jahnavi",
+    age=20,
+    branch="ECE"
+)
+
+print(student)
+
+├── 02_student_model.py
+
+#  Student Pydantic Model
+
+from pydantic import BaseModel
+
+
+class Student(BaseModel):
+    name: str
+    age: int
+    branch: str
+
+
+student = Student(
+    name="Jahnavi",
+    age=20,
+    branch="ECE"
+)
+
+print("Name:", student.name)
+print("Age:", student.age)
+print("Branch:", student.branch)
+
+├── 03_fastapi_request_body.py
+
+#  FastAPI Request Body
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+
+class Student(BaseModel):
+    name: str
+    age: int
+    branch: str
+
+
+@app.post("/students")
+def create_student(student: Student):
+    return student
+
+├── 04_pydantic_validation.py
+
+#  Pydantic Validation
+
+from pydantic import BaseModel
+
+
+class Student(BaseModel):
+    name: str
+    age: int
+    branch: str
+
+
+student = Student(
+    name="Jahnavi",
+    age=20,
+    branch="ECE"
+)
+
+print(student)
+
+├── 05_student_validation.py
+
+#  Student Data Validation
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+
+class Student(BaseModel):
+    name: str
+    age: int
+    branch: str
+
+
+@app.post("/students")
+def create_student(student: Student):
+    return {
+        "message": "Student data is valid",
+        "student": student
+    }
+
+└── 06_pydantic_practice.py
+
+#  Pydantic Validation Practice
+
+from pydantic import BaseModel
+
+
+# Q1. Create a Pydantic model named Student.
+
+
+# Q2. Add these fields:
+# name → string
+# age → integer
+# branch → string
+
+
+# Q3. Create a Student object with:
+# name = "Jahnavi"
+# age = 20
+# branch = "ECE"
+
+
+# Q4. Create a FastAPI POST route:
+# POST /students
+
+
+# Q5. Accept the Student model as request body.
+
+
+# Q6. Return the student data.
+
+
+# Q7. What is Pydantic?
+
+
+# Q8. What is data validation?
+
+
+# Q9. What is a request body?
+
+
+# Q10. What is the purpose of BaseModel?
